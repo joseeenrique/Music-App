@@ -20,7 +20,8 @@ function getBand() {
     if (!bandSearch) {
       return;
     }
-
+    concertInfo.innerHTML = "";
+    wikiInfo.innerHTML = "";
 getConcerts(bandSearch);
 
 }
@@ -37,8 +38,8 @@ fetch(requestUrl)
       
       eventName = data._embedded.events[i].name;
       concertDate = data._embedded.events[i].dates.start.localDate;
-      concertVenue = data._embedded.events[i]._embedded.venues[0].name
-
+      concertVenue = data._embedded.events[i]._embedded.venues[0].name;
+        
       let eventLine = document.createElement("li");
       let dateLine = document.createElement("li");
       let venueLine = document.createElement("li");
