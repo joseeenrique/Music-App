@@ -1,5 +1,6 @@
 let searchButton = document.getElementById("search-button");
 let concertInfo = document.getElementById("concert-info");
+let wikiInfo = document.getElementById("wiki");
 let bandArray = [];
 
 
@@ -52,16 +53,28 @@ fetch(requestUrl)
       concertInfo.append(eventLine);
       concertInfo.append(venueLine);
       concertInfo.append(blank);
-
-
-      console.log(eventName);
-      console.log(concertDate);
-      console.log(concertVenue);
       }
+      wiki(bandSearch);
       })
     }
+    function wiki(bandSearch){
+        let requestUrl = "https://en.wikipedia.org/api/rest_v1/page/summary/" + bandSearch;
 
+        fetch(requestUrl)
+            .then(function (response) {
+            return response.json();
+    })
+            .then (function (data) {
+                
+                bandInfo = data.extract;
+    
+                bandInfo.textContent = "Bio: " + bandInfo;
+                wikiInfo.append(bandInfo);
 
+    
+        })
+
+    }
 //display buttons in dynamically created list element 
 function addHistory(bandSearch) {
    
@@ -71,9 +84,12 @@ function addHistory(bandSearch) {
     searched.setAttribute( "class", "drop-button");
     searched.setAttribute("value", bandSearch);
     searched.innerText = bandSearch;
+    (TBD).append(searched);
+    
+    //store searches in local sotrage 
     bandArray.push(bandSearch);
     localStorage.setItem("searched", JSON.stringify(bandArray));
-    buttonGroup.append(searched);
+    
     
   }
 
@@ -83,10 +99,9 @@ function addHistory(bandSearch) {
 
 //get api data discography data
 //display in dynamically created list element  
-//create button after each search 
-//store searches in local sotrage 
+
 //add links for ticket purchases
-//figure out if we can click album name to display list  of songs 
+//figure out if we can click album name to display list  of songs (maybe use modal)
 //consider adding youtube video
 //adding wiki bio page 
 searchButton.addEventListener("click", getBand);
