@@ -1,6 +1,6 @@
-let searchButton = document.getElementById("search-button");
+let searchButton = document.getElementById("search_btn");
 let concertInfo = document.getElementById("concert-info");
-let wikiInfo = document.getElementById("wiki");
+let wikiInfo = document.getElementById("repo_3");
 let bandArray = [];
 
 
@@ -20,8 +20,8 @@ function getBand() {
     if (!bandSearch) {
       return;
     }
-    concertInfo.innerHTML = "";
-    wikiInfo.innerHTML = "";
+    console.log(bandSearch)
+    
 getConcerts(bandSearch);
 
 }
@@ -34,8 +34,9 @@ fetch(requestUrl)
       return response.json();
     })
     .then(function (data) {
+      concertInfo.innerHTML = "";
       for (let i = 0; i < data._embedded.events.length; i++) {
-      
+      console.log(data);
       eventName = data._embedded.events[i].name;
       concertDate = data._embedded.events[i].dates.start.localDate;
       concertVenue = data._embedded.events[i]._embedded.venues[0].name;
@@ -58,6 +59,7 @@ fetch(requestUrl)
       wiki(bandSearch);
       })
     }
+
     function wiki(bandSearch){
         let requestUrl = "https://en.wikipedia.org/api/rest_v1/page/summary/" + bandSearch;
 
@@ -66,16 +68,15 @@ fetch(requestUrl)
             return response.json();
     })
             .then (function (data) {
-                
+                wikiInfo.innerHTML = "";
                 bandInfo = data.extract;
-    
-                bandInfo.textContent = "Bio: " + bandInfo;
                 wikiInfo.append(bandInfo);
 
     
         })
 
     }
+
 //display buttons in dynamically created list element 
 function addHistory(bandSearch) {
    
@@ -88,8 +89,15 @@ function addHistory(bandSearch) {
     (TBD).append(searched);
     
     //store searches in local sotrage 
-    bandArray.push(bandSearch);
-    localStorage.setItem("searched", JSON.stringify(bandArray));
+    if (bandArray.length < 5) {
+        bandArray.push(bandSearch);
+        localStorage.setItem("searched", JSON.stringify(bandArray));
+    }
+    else {
+        bandArray.splice(4,1);
+        bandArray.push(bandSearch);
+        localStorage.setItem("searched", JSON.stringify(bandArray));
+    }
     
     
   }

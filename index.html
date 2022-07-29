@@ -1,27 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html class="bg-img">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bandopedia</title>
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+
+    <!-- Bulma link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="Assets/CSS/style.css" />
   </head>
   <body>
+    <!-- Search bar -->
     <section class="section">
       <div class="field is-grouped">
         <p class="control is-expanded">
-          <input id= "band-search" class="input" type="text" placeholder="Find a repository" />
+          <input class="input" id="band-search"  type="text" placeholder="Artist" />
         </p>
         <p class="control">
-          <a id= search-button class="button is-info"> Search </a>
+          <a class="button is-info" id="search_btn"> Search </a>
         </p>
       </div>
     </section>
-    <section>
-      <ul id = "concert-info"></ul>
-    </section>
-    <footer id = "wiki"></footer>
-    <script src="./Assets/JS/script.js"></script>
+
+    <!-- Columns/Boxes -->
+    <div class="columns">
+      <div class="column">
+        <div class="box" id="repo_3">optional repo/info</div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="box" id="repo_1">Repo 1 link here</div>
+        </div>
+        <div class="column">
+          <div class="box" id="repo_2"></div>
+            <ul id = "concert-info"></ul>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="box" id="recent_searches">Recent searches here</div>
+        </div>
+      </div>
+    </div>
+
+    <script rel="stylesheet" src="./Assets/JS/script.js"></script>
   </body>
   
 </html>
