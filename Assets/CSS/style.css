@@ -1,0 +1,8 @@
+.bg-img {
+  background-image: url(https://user-images.githubusercontent.com/107449948/181676109-72dad45b-14f1-479a-a0bc-5a4f1a765b30.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #999;
+}
