@@ -19,7 +19,7 @@
     <section class="section">
       <div class="field is-grouped">
         <p class="control is-expanded">
-          <input class="input" type="text" placeholder="Artist" />
+          <input class="input" id="band-search"  type="text" placeholder="Artist" />
         </p>
         <p class="control">
           <a class="button is-info" id="search_btn"> Search </a>
@@ -37,7 +37,10 @@
           <div class="box" id="repo_1">Repo 1 link here</div>
         </div>
         <div class="column">
-          <div class="box" id="repo_2">Repo 2 link here</div>
+          <div class="box" id="repo_2">
+          
+            <ul id = "concert-info"></ul>
+          </div>
         </div>
       </div>
       <div class="columns">
@@ -47,6 +50,7 @@
       </div>
     </div>
 
-    <link rel="stylesheet" href="Assets/JS/script.js" />
+    <script rel="stylesheet" src="./Assets/JS/script.js"></script>
   </body>
+  
 </html>
