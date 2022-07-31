@@ -15,29 +15,41 @@
     <link rel="stylesheet" href="Assets/CSS/style.css" />
   </head>
   <body>
-    <!-- Search bar -->
-    <section class="section">
-      <div class="field is-grouped">
-        <p class="control is-expanded">
-          <input class="input" type="text" placeholder="Artist" />
-        </p>
-        <p class="control">
-          <a class="button is-info" id="search_btn"> Search </a>
-        </p>
+    <section class="hero is-small is-primary">
+      <div class="hero-body">
+        <p class="title">Bandopedia</p>
+        <!-- Search bar -->
+        <div class="field is-grouped">
+          <p class="control is-half">
+            <input
+              class="input"
+              id="band-search"
+              type="text"
+              placeholder="Artist"
+            />
+          </p>
+          <p class="control">
+            <a class="button is-info" id="search_btn"> Search </a>
+          </p>
+        </div>
       </div>
     </section>
 
     <!-- Columns/Boxes -->
     <div class="columns">
-      <div class="column">
-        <div class="box" id="repo_3">optional repo/info</div>
+      <div class="column is-one-third">
+        <div class="box" id="repo_3">wiki</div>
       </div>
       <div class="columns">
         <div class="column">
-          <div class="box" id="repo_1">Repo 1 link here</div>
+          <div class="box" id="repo_1">repo1</div>
         </div>
         <div class="column">
-          <div class="box" id="repo_2">Repo 2 link here</div>
+          <div class="box" id="repo_2">
+            <ul id="concert-info">
+              ticketmaster
+            </ul>
+          </div>
         </div>
       </div>
       <div class="columns">
