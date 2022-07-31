@@ -1,7 +1,9 @@
 let searchButton = document.getElementById("search_btn");
 let concertInfo = document.getElementById("concert-info");
 let wikiInfo = document.getElementById("repo_3");
+// let bkImage = document.querySelector(".bg.img");
 let bandArray = [];
+let albumsList = document.getElementById("albums");
 
 
 
@@ -36,7 +38,10 @@ fetch(requestUrl)
     .then(function (data) {
       concertInfo.innerHTML = "";
       for (let i = 0; i < data._embedded.events.length; i++) {
-      console.log(data);
+    //   console.log(data._embedded.events[i].images[1].url);
+    //   image = data._embedded.events[i].images[1].url;
+    //   bkImage.stlye
+
       eventName = data._embedded.events[i].name;
       concertDate = data._embedded.events[i].dates.start.localDate;
       concertVenue = data._embedded.events[i]._embedded.venues[0].name;
@@ -59,7 +64,7 @@ fetch(requestUrl)
       wiki(bandSearch);
       })
     }
-
+    //adding wiki bio page 
     function wiki(bandSearch){
         let requestUrl = "https://en.wikipedia.org/api/rest_v1/page/summary/" + bandSearch;
 
@@ -70,7 +75,38 @@ fetch(requestUrl)
             .then (function (data) {
                 wikiInfo.innerHTML = "";
                 bandInfo = data.extract;
+                
                 wikiInfo.append(bandInfo);
+                albums(bandSearch);
+                
+                
+    
+        })
+
+    }
+    function albums(bandSearch){
+        let requestUrl = "https://theaudiodb.com/api/v1/json/523532/searchalbum.php?s=" + bandSearch;
+
+        fetch(requestUrl)
+            .then(function (response) {
+            return response.json();
+    })
+            .then (function (data) {
+                albumsList.innerHTML = "";
+                console.log(data.album[0].strAlbum);
+                
+                for (let x = 0; x < data.album.length; x++) {
+                    albumName = data.album[x].strAlbum;
+                    albumEl = document.createElement("li");
+                    albumEl.textContent = albumName;
+                    albumsList.append(albumEl); 
+                    
+                    
+                   
+                    
+                    
+                }
+                
 
     
         })
@@ -112,5 +148,5 @@ function addHistory(bandSearch) {
 //add links for ticket purchases
 //figure out if we can click album name to display list  of songs (maybe use modal)
 //consider adding youtube video
-//adding wiki bio page 
+
 searchButton.addEventListener("click", getBand);
