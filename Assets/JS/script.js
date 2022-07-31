@@ -102,8 +102,6 @@ fetch(requestUrl)
                     albumsList.append(albumEl); 
                     
                     
-                   
-                    
                     
                 }
                 
