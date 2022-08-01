@@ -54,3 +54,7 @@
     font-size: 40px;
     font-weight: bolder;
 }
+#recent_searches {
+    background-color: transparent;
+    box-shadow: none;
+}
