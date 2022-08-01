@@ -22,8 +22,7 @@ function getBand() {
     
     if (!bandSearch) {
       return;
-    }
-    
+    } 
 getConcerts(bandSearch);
 
 }
@@ -77,18 +76,10 @@ fetch(requestUrl)
                 bioButton.addEventListener("click", renderBio);
                 
                 function renderBio() {
-                    wikiInfo.textContent=bandInfo;
-                    wikiInfo.append(bandInfo);
-                    let collapse = document.createElement("button");
-                    collapse.setAttribute( "class", "button is-info");
-                    collapse.innerHTML = "Shrink Bio";
-                    wikiInfo.prepend(collapse);
-                    collapse.addEventListener("click", function(){
-                        collapse.remove();
-                        wikiInfo.innerHTML = "";
-                        wikiInfo.append(bioButton);
-                        bioButton.addEventListener("click", renderBio);
-                        
+                    bandInformation.textContent=bandInfo;
+                    bandInformation.append(bandInfo);                 
+                    bandInformation.addEventListener("click", function(){
+                        bandInformation.innerHTML = "";
                     })
                 }
                  
@@ -106,7 +97,6 @@ fetch(requestUrl)
     })
             .then (function (data) {
                 albumsList.innerHTML = "";
-                console.log(data);
                 for (let x = 0; x < data.album.length; x++) {
                     albumName = data.album[x].strAlbum;
                     albumEl = document.createElement("li");
@@ -120,7 +110,10 @@ fetch(requestUrl)
 
 //display buttons in dynamically created list element 
 function addHistory(bandSearch) {
-   
+    if (bandSearch === bandArray[0]|| bandSearch === bandArray[1] || bandSearch === bandArray[2]  || bandSearch === bandArray[3] || bandSearch === bandArray[4] || bandSearch === bandArray[5]|| bandSearch === bandArray[6] || bandSearch === bandArray[7] || bandSearch === bandArray[8]){
+       
+      }
+      else{
     let searched = document.createElement("button"); 
     searched.setAttribute("id", "searched-button");
     searched.type = "submit";
@@ -132,12 +125,17 @@ function addHistory(bandSearch) {
     //store searches in local sotrage 
      bandArray.push(bandSearch);
      localStorage.setItem("searched", JSON.stringify(bandArray));   
-  }
+  }}
 
 
 searchButton.addEventListener("click", getBand);
+createHistory.addEventListener("click", reRender);
+function reRender(event) {
+  let buttonReturn = event.target.value;
+  getConcerts(buttonReturn);
+}
 
-// loadSaved();
+loadSaved();
 
 
 //display in dynamically created list element  

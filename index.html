@@ -4,16 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bandopedia</title>
-
     <!-- Bulma link -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
     <!-- CSS link -->
-    <link rel="stylesheet" href="Assets/CSS/style.css" />
-  </head>
+    <link rel="stylesheet" href="Assets/CSS/style.css" /></head>
+  
+
   <body>
     <!-- Search bar -->
     <section class="section">
@@ -30,13 +26,25 @@
     <!-- Columns/Boxes -->
     <section>
     <div class="columns">
-      <div class="column is-three-quarters container">
+      <div class="column is-two-fifths container">
         <div class="box" id="repo_3">
           <button class="button is-info" id="bio-button" >Artist Bio</button>
-            <p id="band-info"></p>
+          <!-- Social Media Icons  -->
+          <i class="fa-brands fa-twitter fa-3x" id="twitter"></i>
+          <i class="fab fa-instagram fa-3x" id="insta"></i>
+          <i class="fab fa-facebook fa-3x" id="fb"></i>
+          <i class="fab fa-wikipedia-w fa-3x" id="wik"></i>
+            
         </div>
       </div>
+    </div>
+    <div class="columns">
+      <div class="column is-three-quarters container">
+        <p id="band-info"></p>
+      </div>
+    </div>
     </section>
+    
     <div class="columns">
       <div class="column is-one-fifth">
         <div class="box" id="recent_searches">Recent searches:</div>
@@ -55,7 +63,8 @@
       </div>
       
     </div>
-
+      <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ce42e41f83.js" crossorigin="anonymous"></script>
     <script rel="stylesheet" src="./Assets/JS/script.js"></script>
   </body>
   
