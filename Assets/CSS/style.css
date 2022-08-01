@@ -6,3 +6,12 @@
   background-size: cover;
   background-color: #999;
 }
+ 
+.drop-button {
+    min-width: 100%;
+    background-color: rgb(35, 180, 185) !important;
+    color:white;
+    border-radius: 12px;
+    margin: 3px;
+   
+}

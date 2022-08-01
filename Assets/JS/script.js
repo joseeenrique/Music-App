@@ -4,14 +4,13 @@ let wikiInfo = document.getElementById("repo_3");
 // let bkImage = document.querySelector(".bg.img");
 let bandArray = [];
 let albumsList = document.getElementById("albums");
-
-
+let createHistory = document.getElementById("recent_searches");
 
 function loadSaved() {
     returnSearch = JSON.parse(localStorage.getItem("searched" ));
    if (returnSearch != null) {
-         for (let o = 0; o < returnSearch.length; o++) {
-         getConcerts(returnSearch[o]);
+         for (let k = 0; k < returnSearch.length; k++) {
+         getConcerts(returnSearch[k]);
       }   
    }
    }
@@ -19,10 +18,10 @@ function loadSaved() {
 //takes in input 
 function getBand() {
     let bandSearch = document.getElementById("band-search").value; 
+    
     if (!bandSearch) {
       return;
     }
-    console.log(bandSearch)
     
 getConcerts(bandSearch);
 
@@ -67,9 +66,10 @@ fetch(requestUrl)
     //adding wiki bio page 
     function wiki(bandSearch){
         let requestUrl = "https://en.wikipedia.org/api/rest_v1/page/summary/" + bandSearch;
-
+   
         fetch(requestUrl)
-            .then(function (response) {
+        .then 
+            (function (response) {
             return response.json();
     })
             .then (function (data) {
@@ -84,6 +84,7 @@ fetch(requestUrl)
         })
 
     }
+    //get api data discography data
     function albums(bandSearch){
         let requestUrl = "https://theaudiodb.com/api/v1/json/523532/searchalbum.php?s=" + bandSearch;
 
@@ -93,22 +94,16 @@ fetch(requestUrl)
     })
             .then (function (data) {
                 albumsList.innerHTML = "";
-                console.log(data.album[0].strAlbum);
                 
                 for (let x = 0; x < data.album.length; x++) {
                     albumName = data.album[x].strAlbum;
                     albumEl = document.createElement("li");
                     albumEl.textContent = albumName;
-                    albumsList.append(albumEl); 
-                    
-                    
+                    albumsList.append(albumEl);
                     
                 }
-                
-
-    
-        })
-
+                addHistory(bandSearch);
+            })
     }
 
 //display buttons in dynamically created list element 
@@ -117,34 +112,29 @@ function addHistory(bandSearch) {
     let searched = document.createElement("button"); 
     searched.setAttribute("id", "searched-button");
     searched.type = "submit";
-    searched.setAttribute( "class", "drop-button");
+    searched.setAttribute( "class", "button is-info drop-button");
     searched.setAttribute("value", bandSearch);
     searched.innerText = bandSearch;
-    (TBD).append(searched);
+    createHistory.append(searched);
     
     //store searches in local sotrage 
-    if (bandArray.length < 5) {
-        bandArray.push(bandSearch);
-        localStorage.setItem("searched", JSON.stringify(bandArray));
-    }
-    else {
-        bandArray.splice(4,1);
-        bandArray.push(bandSearch);
-        localStorage.setItem("searched", JSON.stringify(bandArray));
-    }
-    
-    
+     bandArray.push(bandSearch);
+     localStorage.setItem("searched", JSON.stringify(bandArray));   
   }
 
 
 
 
 
-//get api data discography data
+
+
+
+searchButton.addEventListener("click", getBand);
+loadSaved();
+
+
 //display in dynamically created list element  
 
 //add links for ticket purchases
 //figure out if we can click album name to display list  of songs (maybe use modal)
 //consider adding youtube video
-
-searchButton.addEventListener("click", getBand);
