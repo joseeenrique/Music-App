@@ -6,6 +6,7 @@
   background-size: cover;
   background-color: #999;
 }
+
  
 .drop-button {
     min-width: 100%;
@@ -24,12 +25,20 @@
 #repo_3 {
     display: flex;
     justify-content: center;
-    align-content: space-between;
+    background-color: transparent;
+    box-shadow: none;
+ 
+    
 }
 #twitter, #insta, #fb, #wik, #bio-button {
-    margin-left: 35px;
-    margin-right: 35px;
-}
+    /* margin-left: 35px;
+    margin-right: 35px; */
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-content: space-around;
+   margin-top: 0;
+}  
 #twitter {
     color: rgb(0, 153, 255);
 }
