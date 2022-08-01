@@ -1,10 +1,11 @@
 let searchButton = document.getElementById("search_btn");
 let concertInfo = document.getElementById("concert-info");
 let wikiInfo = document.getElementById("repo_3");
-// let bkImage = document.querySelector(".bg.img");
 let bandArray = [];
 let albumsList = document.getElementById("albums");
 let createHistory = document.getElementById("recent_searches");
+let bioButton = document.getElementById("bio-button");
+let bandInformation = document.getElementById("band-info");
 
 function loadSaved() {
     returnSearch = JSON.parse(localStorage.getItem("searched" ));
@@ -37,9 +38,7 @@ fetch(requestUrl)
     .then(function (data) {
       concertInfo.innerHTML = "";
       for (let i = 0; i < data._embedded.events.length; i++) {
-    //   console.log(data._embedded.events[i].images[1].url);
-    //   image = data._embedded.events[i].images[1].url;
-    //   bkImage.stlye
+   
 
       eventName = data._embedded.events[i].name;
       concertDate = data._embedded.events[i].dates.start.localDate;
@@ -65,7 +64,7 @@ fetch(requestUrl)
     }
     //adding wiki bio page 
     function wiki(bandSearch){
-        let requestUrl = "https://en.wikipedia.org/api/rest_v1/page/summary/" + bandSearch;
+        let requestUrl = "https://theaudiodb.com/api/v1/json/2/search.php?s=" + bandSearch;
    
         fetch(requestUrl)
         .then 
@@ -73,14 +72,27 @@ fetch(requestUrl)
             return response.json();
     })
             .then (function (data) {
-                wikiInfo.innerHTML = "";
-                bandInfo = data.extract;
                 
-                wikiInfo.append(bandInfo);
+                let bandInfo = data.artists[0].strBiographyEN;
+                bioButton.addEventListener("click", renderBio);
+                
+                function renderBio() {
+                    wikiInfo.textContent=bandInfo;
+                    wikiInfo.append(bandInfo);
+                    let collapse = document.createElement("button");
+                    collapse.setAttribute( "class", "button is-info");
+                    collapse.innerHTML = "Shrink Bio";
+                    wikiInfo.prepend(collapse);
+                    collapse.addEventListener("click", function(){
+                        collapse.remove();
+                        wikiInfo.innerHTML = "";
+                        wikiInfo.append(bioButton);
+                        bioButton.addEventListener("click", renderBio);
+                        
+                    })
+                }
+                 
                 albums(bandSearch);
-                
-                
-    
         })
 
     }
@@ -94,7 +106,7 @@ fetch(requestUrl)
     })
             .then (function (data) {
                 albumsList.innerHTML = "";
-                
+                console.log(data);
                 for (let x = 0; x < data.album.length; x++) {
                     albumName = data.album[x].strAlbum;
                     albumEl = document.createElement("li");
@@ -123,14 +135,9 @@ function addHistory(bandSearch) {
   }
 
 
-
-
-
-
-
-
 searchButton.addEventListener("click", getBand);
-loadSaved();
+
+// loadSaved();
 
 
 //display in dynamically created list element  
