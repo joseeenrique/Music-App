@@ -6,6 +6,7 @@ let albumsList = document.getElementById("albums");
 let createHistory = document.getElementById("recent_searches");
 let bioButton = document.getElementById("bio-button");
 let bandInformation = document.getElementById("band-info");
+let artist = document.getElementById("artist");
 
 function loadSaved() {
     returnSearch = JSON.parse(localStorage.getItem("searched" ));
@@ -23,6 +24,7 @@ function getBand() {
     if (!bandSearch) {
       return;
     } 
+
 getConcerts(bandSearch);
 
 }
@@ -38,7 +40,7 @@ fetch(requestUrl)
       concertInfo.innerHTML = "";
       for (let i = 0; i < data._embedded.events.length; i++) {
    
-
+      artist.textContent = bandSearch;
       eventName = data._embedded.events[i].name;
       concertDate = data._embedded.events[i].dates.start.localDate;
       concertVenue = data._embedded.events[i]._embedded.venues[0].name;
