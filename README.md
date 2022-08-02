@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://user-images.githubusercontent.com/107449948/182294997-a580d964-4fb3-4131-ac04-b04341734093.jpg" />
 
-<h1 style="text-align:center"> 
+<h1 align="center"> 
 Bandopedia Music App
 </h1>
 
@@ -17,6 +17,10 @@ Description of what our app does and how it works here.
 - [Tools](#tools)
 - [Credits](#credits)
 - [License](#license)
+
+<p>&nbsp;</p>
+
+## -Need to link a screen shot here-
 
 <p>&nbsp;</p>
 
