@@ -41,9 +41,31 @@ fetch(requestUrl)
     })
     .then(function (data) {
       concertInfo.innerHTML = "";
-      for (let i = 0; i < data._embedded.events.length; i++) {
+        
+      
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url != undefined) {
+        let facebook = data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url;
+        let fLink = document.getElementById("facebook-link");
+        fLink.href = facebook; 
+      }
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url != undefined) {
+        let instagram = data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url;
+        let iLink = document.getElementById("instagram-link");
+        iLink.href = instagram; 
+      }
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url != undefined) {
+        let wikipedia = data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url;
+        let wLink = document.getElementById("wiki-link");
+        wLink.href = wikipedia; 
+      }
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url != undefined) {
+        let twitter = data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url;
+        let tLink = document.getElementById("twitter-link");
+        tLink.href = twitter; 
+      }
+    
 
-   
+      for (let i = 0; i < data._embedded.events.length; i++) {
       artist.textContent = bandSearch;
       eventName = data._embedded.events[i].name;
       concertDate = data._embedded.events[i].dates.start.localDate;
@@ -124,14 +146,13 @@ function addHistory(bandSearch) {
        
       }
       else{
-        console.log(bandSearch);
-    let searched = document.createElement("button"); 
-    searched.setAttribute("id", "searched-button");
-    searched.type = "submit";
-    searched.setAttribute( "class", "button is-info drop-button");
-    searched.setAttribute("value", bandSearch);
-    searched.innerText = bandSearch;
-    createHistory.append(searched);
+        let searched = document.createElement("button"); 
+        searched.setAttribute("id", "searched-button");
+        searched.type = "submit";
+        searched.setAttribute( "class", "button is-info drop-button");
+        searched.setAttribute("value", bandSearch);
+        searched.innerText = bandSearch;
+        createHistory.append(searched);
     
     //store searches in local sotrage 
      bandArray.push(bandSearch);
@@ -146,9 +167,8 @@ function addHistory(bandSearch) {
             if (deleteBtn != null) {
                 deleteBtn.remove()
             }
-            
          }
-        localStorage.clear()
+        localStorage.clear();
         bandArray = [];
     }
 
