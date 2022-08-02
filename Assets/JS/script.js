@@ -102,10 +102,14 @@ fetch(requestUrl)
     })
             .then (function (data) {
                 albumsList.innerHTML = "";
+                
                 for (let x = 0; x < data.album.length; x++) {
+                    
                     albumName = data.album[x].strAlbum;
+                    albumDate = data.album[x].intYearReleased;
                     albumEl = document.createElement("li");
-                    albumEl.textContent = albumName;
+                    albumEl.textContent = albumName + " - " + albumDate;
+                    
                     albumsList.append(albumEl);
                     
                 }
