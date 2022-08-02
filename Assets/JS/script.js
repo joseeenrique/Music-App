@@ -9,6 +9,7 @@ let bandInformation = document.getElementById("band-info");
 let artist = document.getElementById("artist");
 
 function loadSaved() {
+
     returnSearch = JSON.parse(localStorage.getItem("searched" ));
    if (returnSearch != null) {
          for (let k = 0; k < returnSearch.length; k++) {
@@ -33,12 +34,14 @@ function getConcerts(bandSearch) {
 requestUrl = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + bandSearch + "&sort=date,asc&size=5&apikey=M1YKgwcd7XLntgC0peSBEu8GBJfrre5t";
 
 fetch(requestUrl)
+
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
       concertInfo.innerHTML = "";
       for (let i = 0; i < data._embedded.events.length; i++) {
+
    
       artist.textContent = bandSearch;
       eventName = data._embedded.events[i].name;
@@ -140,8 +143,10 @@ function reRender(event) {
 loadSaved();
 
 
+
 //display in dynamically created list element  
 
 //add links for ticket purchases
 //figure out if we can click album name to display list  of songs (maybe use modal)
 //consider adding youtube video
+
