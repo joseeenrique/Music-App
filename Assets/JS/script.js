@@ -42,27 +42,29 @@ fetch(requestUrl)
     .then(function (data) {
       concertInfo.innerHTML = "";
         
-      
-      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url != undefined) {
-        let facebook = data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url;
-        let fLink = document.getElementById("facebook-link");
-        fLink.href = facebook; 
-      }
-      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url != undefined) {
-        let instagram = data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url;
-        let iLink = document.getElementById("instagram-link");
-        iLink.href = instagram; 
-      }
-      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url != undefined) {
-        let wikipedia = data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url;
-        let wLink = document.getElementById("wiki-link");
-        wLink.href = wikipedia; 
-      }
-      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url != undefined) {
-        let twitter = data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url;
-        let tLink = document.getElementById("twitter-link");
-        tLink.href = twitter; 
-      }
+      console.log(data);
+      console.log(data._embedded.events[0]._embedded.venues[0].city.name);
+      console.log(data._embedded.events[0]._embedded.venues[0].state.stateCode);
+    //   if (data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url != undefined) {
+    //     let facebook = data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url;
+    //     let fLink = document.getElementById("facebook-link");
+    //     fLink.href = facebook; 
+    //   }
+    //   if (data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url != undefined) {
+    //     let instagram = data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url;
+    //     let iLink = document.getElementById("instagram-link");
+    //     iLink.href = instagram; 
+    //   }
+    //   if (data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url != undefined) {
+    //     let wikipedia = data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url;
+    //     let wLink = document.getElementById("wiki-link");
+    //     wLink.href = wikipedia; 
+    //   }
+    //   if (data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url != undefined) {
+    //     let twitter = data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url;
+    //     let tLink = document.getElementById("twitter-link");
+    //     tLink.href = twitter; 
+    //   }
     
 
       for (let i = 0; i < data._embedded.events.length; i++) {
@@ -70,7 +72,10 @@ fetch(requestUrl)
       eventName = data._embedded.events[i].name;
       concertDate = data._embedded.events[i].dates.start.localDate;
       concertVenue = data._embedded.events[i]._embedded.venues[0].name;
-        
+      concertCity = data._embedded.events[i]._embedded.venues[0].city.name;
+      concertState = data._embedded.events[i]._embedded.venues[0].state.stateCode;
+      
+      let locationLine = document.createElement("li");
       let eventLine = document.createElement("li");
       let dateLine = document.createElement("li");
       let venueLine = document.createElement("li");
@@ -79,12 +84,15 @@ fetch(requestUrl)
       eventLine.textContent = "Event: " + eventName;
       dateLine.textContent = "Date: " + concertDate;
       venueLine.textContent = "Venue: " + concertVenue;
+      locationLine.textContent = concertCity + ", " + concertState;
       blank.textContent = "_______________________________";
 
       concertInfo.append(dateLine);
       concertInfo.append(eventLine);
       concertInfo.append(venueLine);
+      concertInfo.append(locationLine);
       concertInfo.append(blank);
+
       }
       wiki(bandSearch);
       })
