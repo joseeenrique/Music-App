@@ -2,14 +2,17 @@ let searchButton = document.getElementById("search_btn");
 let concertInfo = document.getElementById("concert-info");
 let wikiInfo = document.getElementById("repo_3");
 let bandArray = [];
-
-
+let albumsList = document.getElementById("albums");
+let createHistory = document.getElementById("recent_searches");
+let bioButton = document.getElementById("bio-button");
+let bandInformation = document.getElementById("band-info");
+let artist = document.getElementById("artist");
 
 function loadSaved() {
     returnSearch = JSON.parse(localStorage.getItem("searched" ));
    if (returnSearch != null) {
-         for (let o = 0; o < returnSearch.length; o++) {
-         getConcerts(returnSearch[o]);
+         for (let k = 0; k < returnSearch.length; k++) {
+         getConcerts(returnSearch[k]);
       }   
    }
    }
@@ -17,11 +20,11 @@ function loadSaved() {
 //takes in input 
 function getBand() {
     let bandSearch = document.getElementById("band-search").value; 
+    
     if (!bandSearch) {
       return;
-    }
-    console.log(bandSearch)
-    
+    } 
+
 getConcerts(bandSearch);
 
 }
@@ -36,7 +39,8 @@ fetch(requestUrl)
     .then(function (data) {
       concertInfo.innerHTML = "";
       for (let i = 0; i < data._embedded.events.length; i++) {
-      console.log(data);
+   
+      artist.textContent = bandSearch;
       eventName = data._embedded.events[i].name;
       concertDate = data._embedded.events[i].dates.start.localDate;
       concertVenue = data._embedded.events[i]._embedded.venues[0].name;
@@ -59,58 +63,85 @@ fetch(requestUrl)
       wiki(bandSearch);
       })
     }
-
+    //adding wiki bio page 
     function wiki(bandSearch){
-        let requestUrl = "https://en.wikipedia.org/api/rest_v1/page/summary/" + bandSearch;
+        let requestUrl = "https://theaudiodb.com/api/v1/json/2/search.php?s=" + bandSearch;
+   
+        fetch(requestUrl)
+        .then 
+            (function (response) {
+            return response.json();
+    })
+            .then (function (data) {
+                
+                let bandInfo = data.artists[0].strBiographyEN;
+                bioButton.addEventListener("click", renderBio);
+                
+                function renderBio() {
+                    bandInformation.textContent=bandInfo;
+                    bandInformation.append(bandInfo);                 
+                    bandInformation.addEventListener("click", function(){
+                        bandInformation.innerHTML = "";
+                    })
+                }
+                 
+                albums(bandSearch);
+        })
+
+    }
+    //get api data discography data
+    function albums(bandSearch){
+        let requestUrl = "https://theaudiodb.com/api/v1/json/523532/searchalbum.php?s=" + bandSearch;
 
         fetch(requestUrl)
             .then(function (response) {
             return response.json();
     })
             .then (function (data) {
-                wikiInfo.innerHTML = "";
-                bandInfo = data.extract;
-                wikiInfo.append(bandInfo);
-
-    
-        })
-
+                albumsList.innerHTML = "";
+                for (let x = 0; x < data.album.length; x++) {
+                    albumName = data.album[x].strAlbum;
+                    albumEl = document.createElement("li");
+                    albumEl.textContent = albumName;
+                    albumsList.append(albumEl);
+                    
+                }
+                addHistory(bandSearch);
+            })
     }
 
 //display buttons in dynamically created list element 
 function addHistory(bandSearch) {
-   
+    if (bandSearch === bandArray[0]|| bandSearch === bandArray[1] || bandSearch === bandArray[2]  || bandSearch === bandArray[3] || bandSearch === bandArray[4] || bandSearch === bandArray[5]|| bandSearch === bandArray[6] || bandSearch === bandArray[7] || bandSearch === bandArray[8]){
+       
+      }
+      else{
     let searched = document.createElement("button"); 
     searched.setAttribute("id", "searched-button");
     searched.type = "submit";
-    searched.setAttribute( "class", "drop-button");
+    searched.setAttribute( "class", "button is-info drop-button");
     searched.setAttribute("value", bandSearch);
     searched.innerText = bandSearch;
-    (TBD).append(searched);
+    createHistory.append(searched);
     
     //store searches in local sotrage 
-    if (bandArray.length < 5) {
-        bandArray.push(bandSearch);
-        localStorage.setItem("searched", JSON.stringify(bandArray));
-    }
-    else {
-        bandArray.splice(4,1);
-        bandArray.push(bandSearch);
-        localStorage.setItem("searched", JSON.stringify(bandArray));
-    }
-    
-    
-  }
+     bandArray.push(bandSearch);
+     localStorage.setItem("searched", JSON.stringify(bandArray));   
+  }}
 
 
+searchButton.addEventListener("click", getBand);
+createHistory.addEventListener("click", reRender);
+function reRender(event) {
+  let buttonReturn = event.target.value;
+  getConcerts(buttonReturn);
+}
+
+loadSaved();
 
 
-
-//get api data discography data
 //display in dynamically created list element  
 
 //add links for ticket purchases
 //figure out if we can click album name to display list  of songs (maybe use modal)
 //consider adding youtube video
-//adding wiki bio page 
-searchButton.addEventListener("click", getBand);
