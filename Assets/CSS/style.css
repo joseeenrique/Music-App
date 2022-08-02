@@ -6,3 +6,55 @@
   background-size: cover;
   background-color: #999;
 }
+
+.drop-button {
+  min-width: 100%;
+  background-color: rgb(35, 180, 185) !important;
+  color: white;
+  border-radius: 12px;
+  margin: 3px;
+}
+#band-info {
+  background-color: rgb(38, 49, 146);
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+#repo_3 {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  box-shadow: none;
+}
+#twitter,
+#insta,
+#fb,
+#wik,
+#bio-button {
+  /* margin-left: 35px;
+    margin-right: 35px; */
+  display: flex;
+  flex: auto;
+  justify-content: center;
+  align-content: space-around;
+  margin-top: 0;
+}
+#twitter {
+  color: rgb(0, 153, 255);
+}
+#fb {
+  color: blue;
+}
+#insta {
+  color: rgb(255, 115, 0);
+}
+#artist {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: bolder;
+}
+#recent_searches {
+  background-color: transparent;
+  box-shadow: none;
+}

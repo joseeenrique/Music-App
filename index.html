@@ -4,61 +4,73 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bandopedia</title>
-
     <!-- Bulma link -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
     <!-- CSS link -->
-    <link rel="stylesheet" href="Assets/CSS/style.css" />
-  </head>
+    <link rel="stylesheet" href="Assets/CSS/style.css" /></head>
+  
+
   <body>
-    <section class="hero is-small is-primary">
-      <div class="hero-body">
-        <p class="title">Bandopedia</p>
-        <!-- Search bar -->
-        <div class="field is-grouped">
-          <p class="control is-half">
-            <input
-              class="input"
-              id="band-search"
-              type="text"
-              placeholder="Artist"
-            />
-          </p>
-          <p class="control">
-            <a class="button is-info" id="search_btn"> Search </a>
-          </p>
-        </div>
+    <!-- Search bar -->
+    <section class="section">
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input class="input" id="band-search"  type="text" placeholder="Artist" />
+        </p>
+        <p class="control">
+          <a class="button is-info" id="search_btn"> Search </a>
+        </p>
       </div>
     </section>
 
     <!-- Columns/Boxes -->
+    <h1 id = "artist"></h1>
+    <section>
     <div class="columns">
-      <div class="column is-one-third">
-        <div class="box" id="repo_3">wiki</div>
-      </div>
-      <div class="columns">
-        <div class="column">
-          <div class="box" id="repo_1">repo1</div>
+      <div class="column is-6 container">
+        <div class="box container" id="repo_3">
+          
+    <!-- Social Media Icons  -->
+          <i class="fa-brands fa-twitter fa-3x" id="twitter"></i>
+          <i class="fab fa-instagram fa-3x" id="insta"></i>
+          <i class="fab fa-wikipedia-w fa-3x" id="wik"></i>
+          <i class="fab fa-facebook fa-3x" id="fb"></i> 
+          
         </div>
-        <div class="column">
-          <div class="box" id="repo_2">
-            <ul id="concert-info">
-              ticketmaster
-            </ul>
+        <button class="button is-info container" id="bio-button" >Artist Bio</button>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-three-quarters container">
+        <p id="band-info"></p>
+      </div>
+    </div>
+    </section>
+    
+    <div class="columns">
+      <div class="column is-2 container ">
+        <div>Recent Searches:</div>
+        <div class="box" id="recent_searches">
+          
+        </div>
+      </div>
+        <div class="column is-4 container">
+          <div class="box" id="repo_1"> Artist Albums:
+            <ul id = "albums"></ul>
+          </div>
+        </div>
+        <div class="column is-4 container"> 
+          <div class="box" id="repo_2">Tour Dates:
+          
+            <ul id = "concert-info"></ul>
           </div>
         </div>
       </div>
-      <div class="columns">
-        <div class="column">
-          <div class="box" id="recent_searches">Recent searches here</div>
-        </div>
-      </div>
+      
     </div>
-
-    <link rel="stylesheet" href="Assets/JS/script.js" />
+      <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ce42e41f83.js" crossorigin="anonymous"></script>
+    <script rel="stylesheet" src="./Assets/JS/script.js"></script>
   </body>
+  
 </html>
