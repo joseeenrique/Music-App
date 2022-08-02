@@ -42,9 +42,9 @@ fetch(requestUrl)
     .then(function (data) {
       concertInfo.innerHTML = "";
         
-      console.log(data);
-      console.log(data._embedded.events[0]._embedded.venues[0].city.name);
-      console.log(data._embedded.events[0]._embedded.venues[0].state.stateCode);
+    //   console.log(data);
+    //   console.log(data._embedded.events[0]._embedded.venues[0].city.name);
+    //   console.log(data._embedded.events[0]._embedded.venues[0].state.stateCode);
     //   if (data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url != undefined) {
     //     let facebook = data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url;
     //     let fLink = document.getElementById("facebook-link");
@@ -73,7 +73,7 @@ fetch(requestUrl)
       concertDate = data._embedded.events[i].dates.start.localDate;
       concertVenue = data._embedded.events[i]._embedded.venues[0].name;
       concertCity = data._embedded.events[i]._embedded.venues[0].city.name;
-      concertState = data._embedded.events[i]._embedded.venues[0].state.stateCode;
+    //   concertState = data._embedded.events[i]._embedded.venues[0].state.stateCode;
       
       let locationLine = document.createElement("li");
       let eventLine = document.createElement("li");
@@ -84,7 +84,8 @@ fetch(requestUrl)
       eventLine.textContent = "Event: " + eventName;
       dateLine.textContent = "Date: " + concertDate;
       venueLine.textContent = "Venue: " + concertVenue;
-      locationLine.textContent = concertCity + ", " + concertState;
+      locationLine.textContent = concertCity;
+    //   + ", " + concertState;
       blank.textContent = "_______________________________";
 
       concertInfo.append(dateLine);
@@ -178,6 +179,7 @@ function addHistory(bandSearch) {
          }
         localStorage.clear();
         bandArray = [];
+        // location.reload()
     }
 
 
