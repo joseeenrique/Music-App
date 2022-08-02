@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html class="bg-img">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Bandopedia</title>
     <link rel="title icon" href="Assets/Images/music-256.png">
     <!-- Bulma link -->
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
     <!-- CSS link -->
     <link rel="stylesheet" href="Assets/CSS/style.css" /></head>
+
   
 
-  <body>
-    <!-- Search bar -->
+      <body>
+       <!-- Search bar -->
+
 
 
     <section class="hero">
       <div class="hero-body">
 
-          <p class="title">Bandopedia</p>
+          <p class="title has-text-centered">Bandopedia</p>
         <div class="field is-grouped is-grouped-centered">
           <p class="control is-half is-size-1-mobile">
+
 
             <input class="input" id="band-search"  type="text" placeholder="Artist" />
           </p>
@@ -51,18 +55,21 @@
 
       </div>
     </div>
+    
     <div class="columns">
       <div class="column is-three-quarters container">
         <p id="band-info" class="is-size-6-mobile"></p>
       </div>
     </div>
     </section>
-    
+    <section class="bg-img">
     <div class="columns">
       <div class="column is-2 container ">
+
         <div id="recent" class="is-size-6-mobile">Recent Searches:</div>
 
         <button class="button is-small is-primary is-light" id="recent_clear">Clear</button>
+
 
         <div class="box" id="recent_searches">
           
@@ -82,11 +89,13 @@
       </div>
       
     </div>
+  </div> 
+  </section> 
       <!-- Font Awesome -->
+      <script src="./assets/app.js"></script>
     <script src="https://kit.fontawesome.com/ce42e41f83.js" crossorigin="anonymous"></script>
     <script rel="stylesheet" src="./Assets/JS/script.js"></script>
   </body>
   
 
 </html>
-
