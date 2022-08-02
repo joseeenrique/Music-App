@@ -7,6 +7,7 @@ let createHistory = document.getElementById("recent_searches");
 let bioButton = document.getElementById("bio-button");
 let bandInformation = document.getElementById("band-info");
 let artist = document.getElementById("artist");
+let clearBtn = document.getElementById("recent_clear");
 
 function loadSaved() {
 
@@ -123,6 +124,7 @@ function addHistory(bandSearch) {
        
       }
       else{
+        console.log(bandSearch);
     let searched = document.createElement("button"); 
     searched.setAttribute("id", "searched-button");
     searched.type = "submit";
@@ -134,10 +136,25 @@ function addHistory(bandSearch) {
     //store searches in local sotrage 
      bandArray.push(bandSearch);
      localStorage.setItem("searched", JSON.stringify(bandArray));   
-  }}
+       
+  
+    }}
+    function clearSaved () {
+        deleteSearch = JSON.parse(localStorage.getItem("searched" ));
+        for (let index = 0; index < bandArray.length; index++) {    
+            deleteBtn = document.getElementById("searched-button");
+            if (deleteBtn != null) {
+                deleteBtn.remove()
+            }
+            
+         }
+        localStorage.clear()
+        bandArray = [];
+    }
 
 
 searchButton.addEventListener("click", getBand);
+clearBtn.addEventListener("click",clearSaved);
 createHistory.addEventListener("click", reRender);
 function reRender(event) {
   let buttonReturn = event.target.value;
