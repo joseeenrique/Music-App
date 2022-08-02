@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bandopedia</title>
+    <!-- Title Icon -->
+    <link rel="title icon" href="Assets/Images/document-music-icon.png">
     <!-- Bulma link -->
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
     <!-- CSS link -->
@@ -21,7 +23,7 @@
             <input class="input" id="band-search"  type="text" placeholder="Artist" />
           </p>
           <p class="control">
-            <a class="button is-info" id="search_btn"> Search </a>
+            <a class="button is-danger" id="search_btn"> Search </a>
           </p>
         </div>
 
@@ -55,6 +57,7 @@
     <div class="columns">
       <div class="column is-2 container ">
         <div>Recent Searches:</div>
+        <button class="button is-small is-primary is-light" id="recent_clear">Clear</button>
         <div class="box" id="recent_searches">
           
         </div>
