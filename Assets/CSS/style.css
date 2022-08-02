@@ -1,13 +1,16 @@
 .bg-img {
-  background-image: url(https://user-images.githubusercontent.com/107449948/181676109-72dad45b-14f1-479a-a0bc-5a4f1a765b30.jpg);
+  background-image: url(https://cdn.wallpapersafari.com/3/69/QyI4r8.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #999;
+  background-blend-mode: darken;
 }
 
-
+h1 {
+    color: white;
+}
  
 .drop-button {
     min-width: 100%;
@@ -18,7 +21,7 @@
    
 }
 #band-info {
-    background-color: rgb(38, 49, 146);
+    background-color: rgb(35, 180, 185);
     padding: 10px;
     color: white;
     border-radius: 10px;
@@ -54,6 +57,9 @@
     margin-bottom:20px;
     font-size: 40px;
     font-weight: bolder;
+}
+#wik{
+    color: rgba(255, 255, 255, 0.685);
 }
 #recent_searches {
     background-color: transparent;
