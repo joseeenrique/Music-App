@@ -1,7 +1,6 @@
 .bg-img {
 
   background-image: url(https://wallpapercave.com/wp/wp8930518.jpg);
-
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -15,6 +14,7 @@
 #intro{
     background: rgb(1,0,5);
 background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgba(9,58,102,1) 50%, rgba(0,0,0,1) 75%);
+
    }
 
 #header-style{
@@ -45,17 +45,23 @@ h1 {
     color: white;
     border-radius: 10px;
 }
+#repo_1{
+    background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgba(9,58,102,1) 50%, rgba(0,0,0,1) 75%);
+}
 #repo_3 {
     display: flex;
     justify-content: center;
     background-color: transparent;
-    box-shadow: none;
- 
-    
+    box-shadow: none;   
 }
-#twitter, #insta, #fb, #wik, #bio-button {
-    /* margin-left: 35px;
-    margin-right: 35px; */
+.album-btn{
+    color: white;
+    background-color: rgba(9,58,102,1);
+    border-radius: 10px;
+    padding: 3px;
+    margin:1px;
+}
+#twitter-link, #instagram-link, #facebook-link, #wiki-link, #bio-button {
     display: flex;
     flex: auto;
     justify-content: center;
@@ -77,6 +83,7 @@ h1 {
     font-size: 40px;
     font-weight: bolder;
 }
+
 #wik{
     color: rgba(255, 255, 255, 0.685);
 }
@@ -86,6 +93,9 @@ h1 {
 }
 #recent {
     color:rgba(255, 255, 255, 0.685);
+}
+.modal-content{ 
+    margin-top: 150px;  
 }
 
 #search_btn{
