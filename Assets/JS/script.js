@@ -42,24 +42,24 @@ fetch(requestUrl)
     })
     .then(function (data) {
       concertInfo.innerHTML = "";
-        
+        console.log(data);
     
-      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url != undefined) {
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks != undefined) {
         let facebook = data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url;
         let fLink = document.getElementById("facebook-link");
         fLink.href = facebook; 
       }
-      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url != undefined) {
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks != undefined) {
         let instagram = data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url;
         let iLink = document.getElementById("instagram-link");
         iLink.href = instagram; 
       }
-      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url != undefined) {
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks != undefined) {
         let wikipedia = data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url;
         let wLink = document.getElementById("wiki-link");
         wLink.href = wikipedia; 
       }
-      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url != undefined) {
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks != undefined) {
         let twitter = data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url;
         let tLink = document.getElementById("twitter-link");
         tLink.href = twitter; 
