@@ -14,7 +14,7 @@ function loadSaved() {
     returnSearch = JSON.parse(localStorage.getItem("searched" ));
    if (returnSearch != null) {
          for (let k = 0; k < returnSearch.length; k++) {
-         getConcerts(returnSearch[k]);
+         albums(returnSearch[k]);
       }   
    }
    }
@@ -28,7 +28,7 @@ function getBand() {
       return;
     } 
 
-getConcerts(bandSearch);
+albums(bandSearch);
 
 }
 //get api for concert dates 
@@ -98,7 +98,7 @@ fetch(requestUrl)
       
 
       }
-      wiki(bandSearch);
+      addHistory(bandSearch);
       })
     }
     //adding wiki bio page 
@@ -123,7 +123,7 @@ fetch(requestUrl)
                     })
                 }
                  
-                albums(bandSearch);
+                getConcerts(bandSearch);
         })
 
     }
@@ -154,7 +154,7 @@ fetch(requestUrl)
                     albumsList.append(lineBreak);
                     
                     function addPic(event) {
-                        console.log(event.target.value)
+                        
                         let displayArt = event.target.value;
                         albumArt.src = displayArt;
                         modal.style.display = "block";
@@ -167,7 +167,7 @@ fetch(requestUrl)
                       close.addEventListener("click",closeMe)
                     }    
                 
-                addHistory(bandSearch);
+                wiki(bandSearch);
             })
     }
 
@@ -223,7 +223,7 @@ clearBtn.addEventListener("click",clearSaved);
 createHistory.addEventListener("click", reRender);
 function reRender(event) {
   let buttonReturn = event.target.value;
-  getConcerts(buttonReturn);
+  albums(buttonReturn);
 }
 
 loadSaved();
