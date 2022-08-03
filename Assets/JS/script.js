@@ -69,22 +69,28 @@ fetch(requestUrl)
 
       for (let i = 0; i < data._embedded.events.length; i++) {
       artist.textContent = bandSearch;
+    
       eventName = data._embedded.events[i].name;
       concertDate = data._embedded.events[i].dates.start.localDate;
       concertVenue = data._embedded.events[i]._embedded.venues[0].name;
       concertCity = data._embedded.events[i]._embedded.venues[0].city.name;
+      concertUrl =  data._embedded.events[i].url
+      
     //   concertState = data._embedded.events[i]._embedded.venues[0].state.stateCode;
       
       let locationLine = document.createElement("li");
       let eventLine = document.createElement("li");
       let dateLine = document.createElement("li");
       let venueLine = document.createElement("li");
+      let concertUrlLine = document.createElement("a")
       let blank = document.createElement("li");
       
       eventLine.textContent = "Event: " + eventName;
       dateLine.textContent = "Date: " + concertDate;
       venueLine.textContent = "Venue: " + concertVenue;
       locationLine.textContent = concertCity;
+      concertUrlLine.textContent =  concertUrl
+      
     //   + ", " + concertState;
       blank.textContent = "_______________________________";
 
@@ -92,7 +98,9 @@ fetch(requestUrl)
       concertInfo.append(eventLine);
       concertInfo.append(venueLine);
       concertInfo.append(locationLine);
+      concertInfo.append(concertUrlLine)
       concertInfo.append(blank);
+      
 
       }
       wiki(bandSearch);
