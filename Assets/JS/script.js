@@ -184,6 +184,15 @@ function addHistory(bandSearch) {
 
 
 searchButton.addEventListener("click", getBand);
+
+document.addEventListener("keydown", function(event) {
+  if (event.key == "Enter") {
+    console.log("hello world!")
+    event.preventDefault();
+    getBand();
+    }
+}); 
+
 clearBtn.addEventListener("click",clearSaved);
 createHistory.addEventListener("click", reRender);
 function reRender(event) {
