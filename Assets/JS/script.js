@@ -45,26 +45,26 @@ fetch(requestUrl)
     //   console.log(data);
     //   console.log(data._embedded.events[0]._embedded.venues[0].city.name);
     //   console.log(data._embedded.events[0]._embedded.venues[0].state.stateCode);
-    //   if (data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url != undefined) {
-    //     let facebook = data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url;
-    //     let fLink = document.getElementById("facebook-link");
-    //     fLink.href = facebook; 
-    //   }
-    //   if (data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url != undefined) {
-    //     let instagram = data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url;
-    //     let iLink = document.getElementById("instagram-link");
-    //     iLink.href = instagram; 
-    //   }
-    //   if (data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url != undefined) {
-    //     let wikipedia = data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url;
-    //     let wLink = document.getElementById("wiki-link");
-    //     wLink.href = wikipedia; 
-    //   }
-    //   if (data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url != undefined) {
-    //     let twitter = data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url;
-    //     let tLink = document.getElementById("twitter-link");
-    //     tLink.href = twitter; 
-    //   }
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url != undefined) {
+        let facebook = data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url;
+        let fLink = document.getElementById("facebook-link");
+        fLink.href = facebook; 
+      }
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url != undefined) {
+        let instagram = data._embedded.events[0]._embedded.attractions[0].externalLinks.instagram[0].url;
+        let iLink = document.getElementById("instagram-link");
+        iLink.href = instagram; 
+      }
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url != undefined) {
+        let wikipedia = data._embedded.events[0]._embedded.attractions[0].externalLinks.wiki[0].url;
+        let wLink = document.getElementById("wiki-link");
+        wLink.href = wikipedia; 
+      }
+      if (data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url != undefined) {
+        let twitter = data._embedded.events[0]._embedded.attractions[0].externalLinks.twitter[0].url;
+        let tLink = document.getElementById("twitter-link");
+        tLink.href = twitter; 
+      }
     
 
       for (let i = 0; i < data._embedded.events.length; i++) {
@@ -139,10 +139,22 @@ fetch(requestUrl)
                     
                     albumName = data.album[x].strAlbum;
                     albumDate = data.album[x].intYearReleased;
-                    albumEl = document.createElement("li");
+                    albumEl = document.createElement("button");
+                    lineBreak = document.createElement("br");
+                    albumCover = data.album[x].strAlbumThumb
+                    albumEl.setAttribute("value", albumCover);
+
                     albumEl.textContent = albumName + " - " + albumDate;
                     
                     albumsList.append(albumEl);
+                    albumsList.append(lineBreak);
+                    albumEl.addEventListener("click", addPic) 
+                    function addPic(event) {
+                        console.log(event.target.value)
+                    }    
+                    
+                    
+                        
                     
                 }
                 addHistory(bandSearch);
@@ -179,7 +191,7 @@ function addHistory(bandSearch) {
          }
         localStorage.clear();
         bandArray = [];
-        // location.reload()
+        
     }
 
 
@@ -208,9 +220,9 @@ loadSaved();
 
 
 
-//display in dynamically created list element  
 
-//add links for ticket purchases
+
+
 //figure out if we can click album name to display list  of songs (maybe use modal)
 //consider adding youtube video
 
