@@ -2,7 +2,7 @@
 <img src="https://user-images.githubusercontent.com/107449948/182294997-a580d964-4fb3-4131-ac04-b04341734093.jpg" />
 
 <h1 align="center"> 
-Bandopedia Music App
+Bandopedia Music App &#153
 </h1>
 
 <p align="center">
@@ -20,7 +20,9 @@ Description of what our app does and how it works here.
 
 <p>&nbsp;</p>
 
-## -Need to link a screen shot here-
+<p align="center">
+
+[<img src="https://user-images.githubusercontent.com/107449948/182504355-cc0deb1c-a34a-46f5-b896-7a9562031c1d.png">](https://joseeenrique.github.io/Music-App/)
 
 <p>&nbsp;</p>
 
@@ -44,9 +46,11 @@ Description of what our app does and how it works here.
 
 # Credits
 
-<h3>Sammy Pennell</h3>
+| Sammy Pennell                                                                                                                        |                                                             Bryan Wienhoff                                                              |                                                               Jose Martinez                                                               |                                                                                                                             Dylan Macres |
+| :----------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">](https://github.com/SammyDP) | [<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">](https://github.com/Hoffalypse) | [<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">](https://github.com/joseeenrique) | [<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">](https://github.com/DylanMacres) |
 
-[<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">](https://github.com/SammyDP)
+<!-- [<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">](https://github.com/DylanMacres) -->
 
 <p>&nbsp;</p>
 
