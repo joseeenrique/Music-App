@@ -21,8 +21,9 @@ function loadSaved() {
 
 //takes in input 
 function getBand() {
-    let bandSearch = document.getElementById("band-search").value; 
-    
+
+    let inputText = document.getElementById("band-search").value; 
+    let bandSearch = inputText.toUpperCase();
     if (!bandSearch) {
       return;
     } 
@@ -42,9 +43,7 @@ fetch(requestUrl)
     .then(function (data) {
       concertInfo.innerHTML = "";
         
-    //   console.log(data);
-    //   console.log(data._embedded.events[0]._embedded.venues[0].city.name);
-    //   console.log(data._embedded.events[0]._embedded.venues[0].state.stateCode);
+    
       if (data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url != undefined) {
         let facebook = data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url;
         let fLink = document.getElementById("facebook-link");
@@ -69,30 +68,26 @@ fetch(requestUrl)
 
       for (let i = 0; i < data._embedded.events.length; i++) {
       artist.textContent = bandSearch;
-    
       eventName = data._embedded.events[i].name;
       concertDate = data._embedded.events[i].dates.start.localDate;
       concertVenue = data._embedded.events[i]._embedded.venues[0].name;
       concertCity = data._embedded.events[i]._embedded.venues[0].city.name;
       concertUrl =  data._embedded.events[i].url
-      
-    //   concertState = data._embedded.events[i]._embedded.venues[0].state.stateCode;
+      concertCountry = data._embedded.events[i]._embedded.venues[0].country.countryCode;
       
       let locationLine = document.createElement("li");
       let eventLine = document.createElement("li");
       let dateLine = document.createElement("li");
       let venueLine = document.createElement("li");
-      let concertUrlLine = document.createElement("a")
+      let concertUrlLine = document.createElement("a");
       let blank = document.createElement("li");
       
       eventLine.textContent = "Event: " + eventName;
       dateLine.textContent = "Date: " + concertDate;
       venueLine.textContent = "Venue: " + concertVenue;
-      locationLine.textContent = concertCity;
-      concertUrlLine.textContent =  concertUrl
-      
-    //   + ", " + concertState;
-      blank.textContent = "_______________________________";
+      locationLine.textContent = concertCity + ", " + concertCountry;
+      concertUrlLine.textContent =  concertUrl;
+      blank.textContent = "_____________________________________________________";
 
       concertInfo.append(dateLine);
       concertInfo.append(eventLine);
@@ -144,27 +139,34 @@ fetch(requestUrl)
                 albumsList.innerHTML = "";
                 
                 for (let x = 0; x < data.album.length; x++) {
-                    
+                    let albumArt = document.getElementById("album-art");
+                    let modal = document.getElementById("md");
+                    let close = document.getElementById("close");
                     albumName = data.album[x].strAlbum;
                     albumDate = data.album[x].intYearReleased;
                     albumEl = document.createElement("button");
                     lineBreak = document.createElement("br");
                     albumCover = data.album[x].strAlbumThumb
                     albumEl.setAttribute("value", albumCover);
-
+                    albumEl.setAttribute("class", "album-btn");
                     albumEl.textContent = albumName + " - " + albumDate;
-                    
                     albumsList.append(albumEl);
                     albumsList.append(lineBreak);
-                    albumEl.addEventListener("click", addPic) 
+                    
                     function addPic(event) {
                         console.log(event.target.value)
+                        let displayArt = event.target.value;
+                        albumArt.src = displayArt;
+                        modal.style.display = "block";
                     }    
                     
-                    
-                        
-                    
-                }
+                    function closeMe() { 
+                        modal.style.display = "none";
+                      }
+                      albumEl.addEventListener("click", addPic) 
+                      close.addEventListener("click",closeMe)
+                    }    
+                
                 addHistory(bandSearch);
             })
     }

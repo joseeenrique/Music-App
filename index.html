@@ -76,8 +76,19 @@
         </div>
       </div>
         <div class="column is-4 container">
-          <div class="box is-size-6-mobile" id="repo_1"> Artist Albums:
-            <ul id = "albums"></ul>
+          <div class="box is-size-6-mobile" id="repo_1"> Artist Albums, Click to see Cover Art
+           <!-- Start of modal for redering album art  -->
+            <div class="modal" id="md">
+              <div class="modal-background"></div>
+              <div class="modal-content">
+                <p class="image is-1by1">
+                  <img id="album-art" alt="Albun Cover">
+                </p>
+              </div>
+              <button class="modal-close is-large" id="close" aria-label="close"></button>
+            </div>
+            <!-- End of modal -->
+            <ul id = "albums" class="container"></ul>
           </div>
         </div>
         <div class="column is-4 container is-size-6-mobile"> 
