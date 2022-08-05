@@ -141,7 +141,6 @@ box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 
 
 #bio-button{
-<<<<<<< HEAD
     background-color: rgba(29,168,145,1);
     -webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 -moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
@@ -158,11 +157,8 @@ box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
     background: rgb(21,26,56);
     background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
         transition: all 0.5s ease-in-out;
-=======
-    background: rgb(227,222,228);
-background: linear-gradient(114deg, rgba(227,222,228,1) 0%, rgba(207,99,242,1) 25%, rgba(152,2,210,1) 50%, rgba(88,40,233,1) 75%, rgba(43,0,215,1) 100%);
 }
-
+ 
 
 .url-Link {
     min-width: 100%;
@@ -170,5 +166,5 @@ background: linear-gradient(114deg, rgba(227,222,228,1) 0%, rgba(207,99,242,1) 2
     color:white;
     border-radius: 12px;
     margin: 3px;
->>>>>>> 2a49efbd5aca088f543bf98ea4b9e58060e43eac
+
 }
