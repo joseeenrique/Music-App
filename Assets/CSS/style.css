@@ -115,3 +115,12 @@ color: #fff;
     background: rgb(227,222,228);
 background: linear-gradient(114deg, rgba(227,222,228,1) 0%, rgba(207,99,242,1) 25%, rgba(152,2,210,1) 50%, rgba(88,40,233,1) 75%, rgba(43,0,215,1) 100%);
 }
+
+
+.url-Link {
+    min-width: 100%;
+    background-color: rgb(35, 180, 185) !important;
+    color:white;
+    border-radius: 12px;
+    margin: 3px;
+}
