@@ -1,13 +1,14 @@
-<p align="center">
 <img src="https://user-images.githubusercontent.com/107449948/182294997-a580d964-4fb3-4131-ac04-b04341734093.jpg" />
 
 <h1 align="center"> 
 Bandopedia Music App &#153
 </h1>
 
-<p align="center">
-Description of what our app does and how it works here.
-</p>
+<p>&nbsp;</p>
+
+<h3 align="center">
+Welcome to Bandopedia, an app where you can search you favorite artist or bands to find out, band information, touring schedules, album discographies and more to come!!!
+</h3>
 
 <p>&nbsp;</p>
 
@@ -20,21 +21,19 @@ Description of what our app does and how it works here.
 
 <p>&nbsp;</p>
 
-<p align="center">
-
-[<img src="https://user-images.githubusercontent.com/107449948/182504355-cc0deb1c-a34a-46f5-b896-7a9562031c1d.png">](https://joseeenrique.github.io/Music-App/)
+[<img src="https://user-images.githubusercontent.com/107449948/182986279-83f0ff36-d1ab-4aee-979c-d3e99b40d44f.png">](https://joseeenrique.github.io/Music-App/)
 
 <p>&nbsp;</p>
 
-## [Wireframe](https://www.figma.com/file/AKJv6EhSlxbtuM9MjxTo0M/Untitled?node-id=0%3A1)
+## <p align="center"> [Wireframe](https://www.figma.com/file/AKJv6EhSlxbtuM9MjxTo0M/Untitled?node-id=0%3A1) </p>
 
 <p>&nbsp;</p>
 
 # User Story
 
     - AS A Music Enthusiast
-    - I WANT
-    - SO THAT I
+    - I WANT an app to search bands or artists for tour info, band info and social media links.
+    - SO THAT I plan my out my year to see concerts.
 
 <p>&nbsp;</p>
 
