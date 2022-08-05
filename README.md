@@ -1,4 +1,3 @@
-<p align="center">
 <img src="https://user-images.githubusercontent.com/107449948/182294997-a580d964-4fb3-4131-ac04-b04341734093.jpg" />
 
 <h1 align="center"> 
@@ -20,13 +19,11 @@ Description of what our app does and how it works here.
 
 <p>&nbsp;</p>
 
-<p align="center">
-
-[<img src="https://user-images.githubusercontent.com/107449948/182504355-cc0deb1c-a34a-46f5-b896-7a9562031c1d.png">](https://joseeenrique.github.io/Music-App/)
+[<img src="https://user-images.githubusercontent.com/107449948/182986279-83f0ff36-d1ab-4aee-979c-d3e99b40d44f.png">](https://joseeenrique.github.io/Music-App/)
 
 <p>&nbsp;</p>
 
-## [Wireframe](https://www.figma.com/file/AKJv6EhSlxbtuM9MjxTo0M/Untitled?node-id=0%3A1)
+## <p align="center"> [Wireframe](https://www.figma.com/file/AKJv6EhSlxbtuM9MjxTo0M/Untitled?node-id=0%3A1) </p>
 
 <p>&nbsp;</p>
 
