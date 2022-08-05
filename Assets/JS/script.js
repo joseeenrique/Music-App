@@ -80,14 +80,28 @@ fetch(requestUrl)
       let eventLine = document.createElement("li");
       let dateLine = document.createElement("li");
       let venueLine = document.createElement("li");
-      let concertUrlLine = document.createElement("a");
+      
+      
+      //Adding event listener
+      let concertUrlLine = document.createElement("button");
+      concertUrlLine.addEventListener("click", event => {
+        console.log(event.target.dataset.url);
+        location.href = event.target.dataset.url;
+      }  );   
+      concertUrlLine.setAttribute("class", "url-Link");
+      let concertLink = document.createElement("a");
+      concertUrlLine.dataset.url = concertUrl
+      concertLink.href = data._embedded.events[i].url;  
+      
+       
+
       let blank = document.createElement("li");
       
       eventLine.textContent = "Event: " + eventName;
       dateLine.textContent = "Date: " + concertDate;
       venueLine.textContent = "Venue: " + concertVenue;
       locationLine.textContent = concertCity + ", " + concertCountry;
-      concertUrlLine.textContent =  concertUrl;
+      concertUrlLine.textContent =  "Buy Tickets";
       blank.textContent = "_____________________________________________________";
 
       concertInfo.append(dateLine);
