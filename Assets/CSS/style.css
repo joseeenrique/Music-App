@@ -7,14 +7,11 @@
   background-size: cover;
   background-color: #999;
   background-blend-mode: darken;
- 
   width: 100%;
-
 }
 #intro{
     background: rgb(1,0,5);
 background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgb(10, 94, 119) 50%, rgba(0,0,0,1) 75%);
-
    }
 
 #header-style{
@@ -25,41 +22,34 @@ background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgb(10, 94, 119) 50%, rgb
     -moz-background-clip: text;
    -webkit-text-fill-color: transparent;
    -moz-text-fill-color: transparent;
-}
-  
+}  
 h1 {
     color: white;
-}
- 
+} 
 .drop-button {
-    min-width: 100%;
+    width: 100%;
     background-color: rgb(29,168,145,1) !important;
     color:white;
     border-radius: 12px;
-    margin: 3px;
-   
+    margin: 3px;   
 }
+.drop-button:hover {background: rgb(21,26,56);
+    background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
+        transition: all 0.5s ease-in-out;
+    }
 #band-info {
     background-color: transparent;
     padding: 10px;
     color: white;
     border-radius: 10px;
 }
-#repo_1{
+#repo_1, #repo_2{
     background: rgb(23,184,194);
 background: linear-gradient(180deg, rgba(23,184,194,1) 0%, rgba(0,0,0,1) 25%, rgba(23,184,194,1) 50%, rgba(0,0,0,1) 75%, rgba(23,184,194,1) 100%);
     color: white;
     -webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 -moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-}
-#repo_2 {
-    background: rgb(23,184,194);
-background: linear-gradient(180deg, rgba(23,184,194,1) 0%, rgba(0,0,0,1) 25%, rgba(23,184,194,1) 50%, rgba(0,0,0,1) 75%, rgba(23,184,194,1) 100%);
-    color: white;
-    -webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-    -moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-    box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 }
 #repo_3 {
     display: flex;
@@ -78,7 +68,6 @@ background: linear-gradient(180deg, rgba(23,184,194,1) 0%, rgba(0,0,0,1) 25%, rg
 .album-btn:hover{ background: rgb(21,26,56);
     background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
         transition: all 0.5s ease-in-out;
-
 }
 #twitter-link, #instagram-link, #facebook-link, #wiki-link, #bio-button {
     display: flex;
@@ -102,14 +91,12 @@ background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%
    -webkit-text-fill-color: transparent;
    -moz-text-fill-color: transparent;
 }
-
 #artist {
     text-align: center;
     margin-bottom:20px;
     font-size: 40px;
     font-weight: bolder;
 }
-
 #wik{
     color: rgba(255, 255, 255, 0.685);
 }
@@ -128,18 +115,13 @@ background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%
     background-color: rgba(29,168,145,1);
     -webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 -moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-   
-     
+box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);     
 }
-
 #search_btn:hover{
     background: rgb(21,26,56);
 background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
-    transition: all 0.5s ease-in-out;
-    
+    transition: all 0.5s ease-in-out;   
 }
-
 #recent_clear{
     background-color: rgba(29,168,145,1);
 color: #fff;
@@ -147,8 +129,6 @@ color: #fff;
 -moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 }
-
-
 #bio-button{
     background-color: rgba(29,168,145,1);
     -webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
@@ -167,7 +147,6 @@ box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
     background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
         transition: all 0.5s ease-in-out;
 }
-
 .url-Link {
     min-width: 100%;
     background-color: rgb(35, 180, 185) !important;
@@ -176,10 +155,39 @@ box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
     margin: 3px;
     width: 50%;
 }
-
-.url-Link:hover{
+.body2{
+    background: rgb(1,0,5);
+    background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgb(10, 94, 119) 50%, rgba(0,0,0,1) 75%);
+}
+#intro_title {
+    font-size: 75px;
+    background: rgb(22,6,170);
+    background: linear-gradient(176deg, rgba(22,6,170,1) 0%, rgba(0,221,103,1) 100%);
+   background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -moz-text-fill-color: transparent;
+}
+.blurb {
+    font-size: 20px;
+    color: white;
+}
+#margins2 {
+    box-sizing: inherit;
+}
+.footer {
+    background-color: black;
+}
+.buy-now {
+    font-size: 16px;
+    color:white;
+    background-color: rgba(29,168,145,1);
+    border-radius: 10px;
+    padding: 3px;
+}
+.buy-now:hover {
     background: rgb(21,26,56);
     background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
         transition: all 0.5s ease-in-out;
-        
 }

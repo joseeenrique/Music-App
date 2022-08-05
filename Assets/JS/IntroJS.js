@@ -1,19 +1,22 @@
-var searchFormEl = document.getElementById("search_page");
+var searchBtn = document.getElementById("search_page");
 
-function artistSubmit(event) {
-  event.preventDefault();
+function artistSubmit() {
+    console.log("hello");
 
-  var searchInputVal = document.querySelector('#search-input').value;
+  var searchInput = document.getElementById("search-input").value;
   
+  var inputString = "./main-page.html?q=" + searchInput;
 
-  if (!searchInputVal) {
-    console.error('You need a search input value!');
-    return;
-  }
-
-  var queryString = './search-results.html?q=' + searchInputVal + '&format=' + formatInputVal;
-
-  location.assign(queryString);
+  location.assign(inputString);
 }
 
-searchFormEl.addEventListener('submit', handleSearchFormSubmit);
+searchBtn.addEventListener('click', artistSubmit);
+
+document.addEventListener("keydown", function(event) {
+    if (event.key == "Enter") {
+      event.preventDefault();
+      
+      artistSubmit();
+      
+      }
+  }); 

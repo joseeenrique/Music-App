@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bandopedia</title>
+    <link rel="title icon" href="https://iconarchive.com/download/i44090/wwalczyszyn/iwindows/Music-Library.ico">
+    <!-- Bulma link -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="Assets/CSS/style.css" /></head>
+
+  
+
+      <body>
+       <!-- Search bar -->
+
+<div id="intro">
+    <section class="hero">
+      <div class="hero-body">
+
+          <p class="title has-text-centered" id="header-style">Bandopedia</p>
+        <div class="field is-grouped is-grouped-centered">
+          <p class="control is-half is-size-1-mobile">
+
+
+            <input class="input" id="band-search"  type="text" placeholder="Artist" />
+          </p>
+          <p class="control">
+            <a class="button is-danger" id="search_btn"> Search </a>
+
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Columns/Boxes -->
+    <h1 id = "artist"></h1>
+    <section>
+    <div class="columns">
+      <div class="column is-6 container">
+        <div class="box container" id="repo_3">
+          
+    <!-- Social Media Icons  -->
+
+            <a id = "twitter-link" target="_blank" ><i class="fa-brands fa-twitter fa-3x" id="twitter"></i></a>
+           <a id = "instagram-link" target="_blank"><i class="fab fa-instagram fa-3x" id="insta"></i></a>
+           <a id = "wiki-link" target="_blank"><i class="fab fa-wikipedia-w fa-3x" id="wik"></i></a>
+           <a id="facebook-link"target="_blank"><i class="fab fa-facebook fa-3x" id="fb"></i></a>
+        </div>
+
+        <button class="button is-info container is-size-5-mobile" id="bio-button" ><i class="fa-solid fa-book-open"></i> &nbsp;Artist Bio </button>
+
+      </div>
+    </div>
+    
+    <div class="columns">
+      <div class="column is-three-quarters container">
+        <p id="band-info" class="is-size-6-mobile"></p>
+      </div>
+    </div>
+  </div>
+    </section>
+    <section class="bg-img">
+    <div class="columns">
+      <div class="column is-2 container ">
+
+        <div id="recent" class="is-size-6-mobile">Recent Searches:</div>
+
+        <button class="button is-small is-primary is-light" id="recent_clear"><i class="fas fa-trash"></i>&nbsp; Clear</button>
+
+
+        <div class="box" id="recent_searches">
+          
+        </div>
+      </div>
+        <div class="column is-4 container">
+          <div class="box is-size-6-mobile" id="repo_1"> <i class="fas fa-compact-disc"></i>&nbsp;Artist Albums, Click to see Cover Art
+           <!-- Start of modal for redering album art  -->
+            <div class="modal" id="md">
+              <div class="modal-background"></div>
+              <div class="modal-content">
+                <p class="image is-1by1">
+                  <img id="album-art" alt="Albun Cover">
+                </p>
+              </div>
+              <button class="modal-close is-large" id="close" aria-label="close"></button>
+            </div>
+            <!-- End of modal -->
+            <ul id = "albums" class="container"></ul>
+          </div>
+        </div>
+        <div class="column is-4 container is-size-6-mobile"> 
+          <div class="box" id="repo_2"><i class="fas fa-guitar"></i>&nbsp;Tour Dates:
+            
+            <ul id = "concert-info"></ul>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Rendered with Bulma</strong> by
+        <a href="https://github.com/SammyDP">Sammy Pennell</a>, <a href="https://github.com/Hoffalypse">Bryan Wienhoff</a>, <a href="https://github.com/joseeenrique">Jose Martinez</a>, <a href="https://github.com/DylanMacres">Dylan Macres</a>.
+        The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The
+        website content is licensed
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+          >CC BY NC SA 4.0</a
+        >.
+      </p>
+    </div>
+  </footer>
+ 
+  </section> 
+      <!-- Font Awesome -->
+      
+    <script src="https://kit.fontawesome.com/ce42e41f83.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script rel="stylesheet" src="./Assets/JS/script.js"></script>
+  </body>
+  
+
+</html>

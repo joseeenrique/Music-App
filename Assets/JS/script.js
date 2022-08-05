@@ -8,7 +8,8 @@ let bioButton = document.getElementById("bio-button");
 let bandInformation = document.getElementById("band-info");
 let artist = document.getElementById("artist");
 let clearBtn = document.getElementById("recent_clear");
-let searchPage = document.getElementById("search_page")
+let searchPage = document.getElementById("search_page");
+let enterKey = document.getElementById("band-search");
 
 function loadSaved() {
 
@@ -29,8 +30,8 @@ function getBand() {
       return;
     } 
 
-albums(bandSearch);
-
+    albums(bandSearch);
+    $('input[type="text"]').val('');
 }
 //get api for concert dates 
 function getConcerts(bandSearch) {
@@ -81,20 +82,14 @@ fetch(requestUrl)
       let dateLine = document.createElement("li");
       let venueLine = document.createElement("li");
       
-      
       //Adding event listener
       let concertUrlLine = document.createElement("button");
+      concertUrlLine.setAttribute("class", "buy-now");
       concertUrlLine.addEventListener("click", event => {
-        console.log(event.target.dataset.url);
         location.href = event.target.dataset.url;
       }  );   
-      concertUrlLine.setAttribute("class", "url-Link");
-      let concertLink = document.createElement("a");
-      concertUrlLine.dataset.url = concertUrl
-      concertLink.href = data._embedded.events[i].url;  
       
-       
-
+      concertUrlLine.dataset.url = concertUrl
       let blank = document.createElement("li");
       
       eventLine.textContent = "Event: " + eventName;
@@ -102,7 +97,7 @@ fetch(requestUrl)
       venueLine.textContent = "Venue: " + concertVenue;
       locationLine.textContent = concertCity + ", " + concertCountry;
       concertUrlLine.textContent =  "Buy Tickets";
-      blank.textContent = "_____________________________________________________";
+      blank.textContent = "________________________________________________";
 
       concertInfo.append(dateLine);
       concertInfo.append(eventLine);
@@ -115,6 +110,16 @@ fetch(requestUrl)
       }
       addHistory(bandSearch);
       })
+    }
+
+    function bringFrom(){
+      let query = window.location.search.split("&");
+      let dataIn = query[0].split('=').pop();
+      capData = dataIn.toUpperCase();
+      cappedData = window.decodeURIComponent(capData);
+      window.history.replaceState({}, document.title, window.location.pathname);
+      albums(cappedData);
+
     }
     //adding wiki bio page 
     function wiki(bandSearch){
@@ -222,6 +227,7 @@ function addHistory(bandSearch) {
 
 searchButton.addEventListener("click", getBand);
 
+
 document.addEventListener("keydown", function(event) {
   if (event.key == "Enter") {
     event.preventDefault();
@@ -242,7 +248,7 @@ function reRender(event) {
 }
 
 loadSaved();
-
+bringFrom();
 
 
 
