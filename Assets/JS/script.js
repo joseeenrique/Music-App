@@ -221,7 +221,6 @@ function addHistory(bandSearch) {
 
 
 searchButton.addEventListener("click", getBand);
-searchPage.addEventListener("click",getBand);
 
 document.addEventListener("keydown", function(event) {
   if (event.key == "Enter") {
