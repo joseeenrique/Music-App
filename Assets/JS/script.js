@@ -30,8 +30,8 @@ function getBand() {
       return;
     } 
 
-albums(bandSearch);
-
+    albums(bandSearch);
+    $('input[type="text"]').val('');
 }
 //get api for concert dates 
 function getConcerts(bandSearch) {
@@ -111,12 +111,13 @@ fetch(requestUrl)
       addHistory(bandSearch);
       })
     }
+
     function bringFrom(){
       let query = window.location.search.split("&");
       let dataIn = query[0].split('=').pop();
       capData = dataIn.toUpperCase();
       cappedData = window.decodeURIComponent(capData);
-      console.log(cappedData);
+      window.history.replaceState({}, document.title, window.location.pathname);
       albums(cappedData);
 
     }
@@ -245,9 +246,9 @@ function reRender(event) {
   let buttonReturn = event.target.value;
   albums(buttonReturn);
 }
-bringFrom();
-loadSaved();
 
+loadSaved();
+bringFrom();
 
 
 
