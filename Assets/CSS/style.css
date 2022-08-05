@@ -32,34 +32,30 @@ h1 {
 }
  
 .drop-button {
-    min-width: 100%;
+    width: 100%;
     background-color: rgb(29,168,145,1) !important;
     color:white;
     border-radius: 12px;
-    margin: 3px;
-   
+    margin: 3px;   
 }
+.drop-button:hover {background: rgb(21,26,56);
+    background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
+        transition: all 0.5s ease-in-out;
+    }
 #band-info {
     background-color: transparent;
     padding: 10px;
     color: white;
     border-radius: 10px;
 }
-#repo_1{
+#repo_1, #repo_2{
     background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgb(10, 94, 119) 50%, rgba(0,0,0,1) 75%);
     color: white;
     -webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 -moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 }
-#repo_2 {
-    background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgb(10, 94, 119) 50%, rgba(0,0,0,1) 75%);
-    color: white;
-    -webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-    -moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-    box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-    
-}
+
 #repo_3 {
     display: flex;
     justify-content: center;
@@ -79,6 +75,7 @@ box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
         transition: all 0.5s ease-in-out;
 
 }
+
 #twitter-link, #instagram-link, #facebook-link, #wiki-link, #bio-button {
     display: flex;
     flex: auto;
