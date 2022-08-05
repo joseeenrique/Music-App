@@ -67,7 +67,7 @@ fetch(requestUrl)
     
 
       for (let i = 0; i < data._embedded.events.length; i++) {
-      artist.textContent = bandSearch;
+      
       eventName = data._embedded.events[i].name;
       concertDate = data._embedded.events[i].dates.start.localDate;
       concertVenue = data._embedded.events[i]._embedded.venues[0].name;
@@ -137,7 +137,7 @@ fetch(requestUrl)
     })
             .then (function (data) {
                 albumsList.innerHTML = "";
-                
+                artist.textContent = bandSearch;
                 for (let x = 0; x < data.album.length; x++) {
                     let albumArt = document.getElementById("album-art");
                     let modal = document.getElementById("md");
