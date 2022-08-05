@@ -82,19 +82,14 @@ fetch(requestUrl)
       let dateLine = document.createElement("li");
       let venueLine = document.createElement("li");
       
-      
       //Adding event listener
       let concertUrlLine = document.createElement("button");
+      concertUrlLine.setAttribute("class", "buy-now");
       concertUrlLine.addEventListener("click", event => {
-        console.log(event.target.dataset.url);
         location.href = event.target.dataset.url;
       }  );   
       
       concertUrlLine.dataset.url = concertUrl
-      
-      
-       
-
       let blank = document.createElement("li");
       
       eventLine.textContent = "Event: " + eventName;
@@ -102,7 +97,7 @@ fetch(requestUrl)
       venueLine.textContent = "Venue: " + concertVenue;
       locationLine.textContent = concertCity + ", " + concertCountry;
       concertUrlLine.textContent =  "Buy Tickets";
-      blank.textContent = "_____________________________________________________";
+      blank.textContent = "________________________________________________";
 
       concertInfo.append(dateLine);
       concertInfo.append(eventLine);
@@ -116,12 +111,13 @@ fetch(requestUrl)
       addHistory(bandSearch);
       })
     }
-    function bringFrom(variable){
+    function bringFrom(){
       let query = window.location.search.split("&");
-      var dataIn = query[0].split('=').pop();
+      let dataIn = query[0].split('=').pop();
       capData = dataIn.toUpperCase();
-      console.log(dataIn);
-      albums(capData);
+      cappedData = window.decodeURIComponent(capData);
+      console.log(cappedData);
+      albums(cappedData);
 
     }
     //adding wiki bio page 
