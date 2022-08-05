@@ -8,6 +8,7 @@ let bioButton = document.getElementById("bio-button");
 let bandInformation = document.getElementById("band-info");
 let artist = document.getElementById("artist");
 let clearBtn = document.getElementById("recent_clear");
+let searchPage = document.getElementById("search_page")
 
 function loadSaved() {
 
@@ -220,6 +221,7 @@ function addHistory(bandSearch) {
 
 
 searchButton.addEventListener("click", getBand);
+searchPage.addEventListener("click",getBand);
 
 document.addEventListener("keydown", function(event) {
   if (event.key == "Enter") {
