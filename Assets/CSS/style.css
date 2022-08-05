@@ -53,8 +53,12 @@ h1 {
 box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
 }
 #repo_2 {
-    background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgba(9,58,102,1) 50%, rgba(0,0,0,1) 75%);
+    background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgb(10, 94, 119) 50%, rgba(0,0,0,1) 75%);
     color: white;
+    -webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
+    -moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
+    box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
+    
 }
 #repo_3 {
     display: flex;
@@ -82,6 +86,7 @@ box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
     align-content: space-around;
    margin-top: 0;
 }  
+
 #twitter {
     color: rgb(0, 153, 255);
 }
@@ -195,10 +200,11 @@ box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
     background-color: black;
 }
 .buy-now {
+    font-size: 16px;
     color:white;
     background-color: rgba(29,168,145,1);
     border-radius: 10px;
-    padding: 6px;
+    padding: 3px;
 }
 .buy-now:hover {
     background: rgb(21,26,56);
