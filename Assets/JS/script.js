@@ -79,7 +79,7 @@ fetch(requestUrl)
       let eventLine = document.createElement("li");
       let dateLine = document.createElement("li");
       let venueLine = document.createElement("li");
-      let concertUrlLine = document.createElement("button");
+      let concertUrlLine = document.createElement("a");
       let blank = document.createElement("li");
       
       eventLine.textContent = "Event: " + eventName;
