@@ -4,9 +4,11 @@
 Bandopedia Music App &#153
 </h1>
 
-<p align="center">
-Description of what our app does and how it works here.
-</p>
+<p>&nbsp;</p>
+
+<h3 align="center">
+Welcome to Bandopedia, an app where you can search you favorite artist or bands to find out, band information, touring schedules, album discographies and more to come!!!
+</h3>
 
 <p>&nbsp;</p>
 
@@ -30,8 +32,8 @@ Description of what our app does and how it works here.
 # User Story
 
     - AS A Music Enthusiast
-    - I WANT
-    - SO THAT I
+    - I WANT an app to search bands or artists for tour info, band info and social media links.
+    - SO THAT I plan my out my year to see concerts.
 
 <p>&nbsp;</p>
 
