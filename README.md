@@ -19,7 +19,7 @@ Description of what our app does and how it works here.
 
 <p>&nbsp;</p>
 
-[<img src="https://user-images.githubusercontent.com/107449948/182504355-cc0deb1c-a34a-46f5-b896-7a9562031c1d.png">](https://joseeenrique.github.io/Music-App/)
+[<img src="https://user-images.githubusercontent.com/107449948/182986279-83f0ff36-d1ab-4aee-979c-d3e99b40d44f.png">](https://joseeenrique.github.io/Music-App/)
 
 <p>&nbsp;</p>
 
