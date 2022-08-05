@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class = "body2" >
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,22 +15,26 @@
     <link rel="stylesheet" href="Assets/CSS/style.css" />
   </head>
 
-  <body>
+  <body >
     <section class="hero is-medium has-text-centered">
       <div class="hero-body">
         <p class="title" id="intro_title">Bandopedia</p>
+        <p class = "blurb">Your One Stop for All Things Music</p>
       </div>
     </section>
-    <div class="container mt-6">
+    <div class="mt-6">
       <div class="columns">
-        <div class="column is-half is-offset-5">
+        <div class="column is-half is-offset-5" id="margins">
           <h1 id="search_title">Search a Band or Artist:</h1>
           <div class="field has-addons">
             <div class="control">
-              <input class="input" type="text" placeholder="Band or Artist" />
+              <input class="input" id="search-input" type="text" placeholder="Band or Artist" />
             </div>
+            
             <div class="control">
-              <button class="button is-info" id="search_page">Search</button>
+              
+              <button class="button is-info container" id="search_page"> Search</button>
+                
             </div>
           </div>
         </div>
@@ -42,6 +46,6 @@
       src="https://kit.fontawesome.com/ce42e41f83.js"
       crossorigin="anonymous"
     ></script>
-    <script rel="stylesheet" src="./Assets/JS/script.js"></script>
+    <script rel="stylesheet" src="./Assets/JS/IntroJS.js"></script>
   </body>
 </html>
