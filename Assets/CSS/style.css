@@ -170,3 +170,28 @@ box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
     margin: 3px;
 
 }
+.body2{
+    background: rgb(1,0,5);
+    background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgb(10, 94, 119) 50%, rgba(0,0,0,1) 75%);
+}
+#intro_title {
+    font-size: 75px;
+    background: rgb(22,6,170);
+    background: linear-gradient(176deg, rgba(22,6,170,1) 0%, rgba(0,221,103,1) 100%);
+   background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   -moz-text-fill-color: transparent;
+}
+.blurb {
+    font-size: 20px;
+    color: white;
+}
+#margins2 {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+    /* margin-left: 50%; */
+    margin-right: 50%;
+}

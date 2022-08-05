@@ -8,7 +8,8 @@ let bioButton = document.getElementById("bio-button");
 let bandInformation = document.getElementById("band-info");
 let artist = document.getElementById("artist");
 let clearBtn = document.getElementById("recent_clear");
-let searchPage = document.getElementById("search_page")
+let searchPage = document.getElementById("search_page");
+let enterKey = document.getElementById("band-search");
 
 function loadSaved() {
 
@@ -88,10 +89,9 @@ fetch(requestUrl)
         console.log(event.target.dataset.url);
         location.href = event.target.dataset.url;
       }  );   
-      concertUrlLine.setAttribute("class", "url-Link");
-      let concertLink = document.createElement("a");
+      
       concertUrlLine.dataset.url = concertUrl
-      concertLink.href = data._embedded.events[i].url;  
+      
       
        
 
@@ -221,7 +221,7 @@ function addHistory(bandSearch) {
 
 
 searchButton.addEventListener("click", getBand);
-searchPage.addEventListener("click",getBand);
+
 
 document.addEventListener("keydown", function(event) {
   if (event.key == "Enter") {
