@@ -5,7 +5,7 @@ function artistSubmit() {
 
   var searchInput = document.getElementById("search-input").value;
   
-  var inputString = "./index.html";
+  var inputString = "./index.html?q=" + searchInput;
 
   location.assign(inputString);
 }

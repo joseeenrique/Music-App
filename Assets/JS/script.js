@@ -116,6 +116,14 @@ fetch(requestUrl)
       addHistory(bandSearch);
       })
     }
+    function bringFrom(variable){
+      let query = window.location.search.split("&");
+      var dataIn = query[0].split('=').pop();
+      capData = dataIn.toUpperCase();
+      console.log(dataIn);
+      albums(capData);
+
+    }
     //adding wiki bio page 
     function wiki(bandSearch){
         let requestUrl = "https://theaudiodb.com/api/v1/json/2/search.php?s=" + bandSearch;
@@ -241,7 +249,7 @@ function reRender(event) {
   let buttonReturn = event.target.value;
   albums(buttonReturn);
 }
-
+bringFrom();
 loadSaved();
 
 
