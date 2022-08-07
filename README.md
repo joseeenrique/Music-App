@@ -46,6 +46,8 @@ https://joseeenrique.github.io/Music-App/
 
 <p>&nbsp;</p>
 <img src = "./Assets/images/tech.png" alt = "languages used">
+
+
 # Credits
 
 | Sammy Pennell                                                                                                                        |                                                             Bryan Wienhoff                                                              |                                                               Jose Martinez                                                               |                                                                                                                             Dylan Macres |
