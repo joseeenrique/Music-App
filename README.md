@@ -15,8 +15,9 @@ Welcome to Bandopedia, an app where you can search you favorite artist or bands 
 ### Table of Content
 
 - [User Story](#user-story)
-- [Tools](#tools)
+- [Technology](#Technology)
 - [Credits](#credits)
+- [Acknowledgments](#Acknowledgments)
 - [License](#license)
 
 <p>&nbsp;</p>
@@ -24,6 +25,8 @@ Welcome to Bandopedia, an app where you can search you favorite artist or bands 
 [<img src="https://user-images.githubusercontent.com/107449948/182986279-83f0ff36-d1ab-4aee-979c-d3e99b40d44f.png">](https://joseeenrique.github.io/Music-App/)
 
 <p>&nbsp;</p>
+
+https://joseeenrique.github.io/Music-App/
 
 ## <p align="center"> [Wireframe](https://www.figma.com/file/AKJv6EhSlxbtuM9MjxTo0M/Untitled?node-id=0%3A1) </p>
 
@@ -37,12 +40,12 @@ Welcome to Bandopedia, an app where you can search you favorite artist or bands 
 
 <p>&nbsp;</p>
 
-# Tools
+# Technology
 
 <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"> <img src="https://user-images.githubusercontent.com/107449948/182315151-08c6a8cb-9059-4929-9f23-8c04075ef5c2.png" width="128" height="24">
 
 <p>&nbsp;</p>
-
+<img src = "./Assets/images/tech.png" alt = "languages used">
 # Credits
 
 | Sammy Pennell                                                                                                                        |                                                             Bryan Wienhoff                                                              |                                                               Jose Martinez                                                               |                                                                                                                             Dylan Macres |
@@ -52,6 +55,11 @@ Welcome to Bandopedia, an app where you can search you favorite artist or bands 
 <!-- [<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">](https://github.com/DylanMacres) -->
 
 <p>&nbsp;</p>
+
+# Acknowledgments
+Kirtley Adams (Teaching Assistant) <br>
+Dan Kaltenbaugh (Instructor)<br>
+George Yoo (Teaching Assisstant)
 
 # License
 
