@@ -45,7 +45,7 @@ https://joseeenrique.github.io/Music-App/
 <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"> <img src="https://user-images.githubusercontent.com/107449948/182315151-08c6a8cb-9059-4929-9f23-8c04075ef5c2.png" width="128" height="24">
 
 <p>&nbsp;</p>
-<img src = "./Assets/images/tech.png" alt = "languages used">
+<img src = "./Assets/Images/tech.png" alt = "languages used">
 
 
 # Credits
