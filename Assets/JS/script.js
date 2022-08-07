@@ -45,7 +45,8 @@ fetch(requestUrl)
     .then(function (data) {
       concertInfo.innerHTML = "";
         console.log(data);
-    
+        
+    if (data._embedded.events[0]._embedded.attractions != undefined) {
       if (data._embedded.events[0]._embedded.attractions[0].externalLinks != undefined) {
         let facebook = data._embedded.events[0]._embedded.attractions[0].externalLinks.facebook[0].url;
         let fLink = document.getElementById("facebook-link");
@@ -66,7 +67,7 @@ fetch(requestUrl)
         let tLink = document.getElementById("twitter-link");
         tLink.href = twitter; 
       }
-    
+    }
 
       for (let i = 0; i < data._embedded.events.length; i++) {
       
