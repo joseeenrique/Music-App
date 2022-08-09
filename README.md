@@ -30,7 +30,7 @@ Welcome to Bandopedia, an app where you can search you favorite artist or bands 
 
 <p>&nbsp;</p>
 
-# Descritption
+# Description
 <p>&nbsp;</p>
 Welcome to Bandopedia! <br> When the user opens the page they are greeted with a simple search page. Just enter the band of your choice. (Shown Below)
 <img src = "./Assets/Images/opening-page.png" alt = "opening page">
