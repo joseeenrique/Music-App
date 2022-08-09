@@ -1,5 +1,18 @@
-.bg-img {
+:root {
+  --ff-alfa: "Alfa Slab One", cursive;
+  --ff-bangers: "Bangers", cursive;
+  --ff-mouse: "Mouse Memoirs", sans-serif;
+  --ff-marker: "Permanent Marker", cursive;
+  --ff-righteous: "Righteous", cursive;
+  --ff-sigmar: "Sigmar One", cursive;
+  --ff-titan: "Titan One", cursive;
+}
 
+* {
+  font-family: var(--ff-righteous);
+}
+
+.bg-img {
   background-image: url(https://wallpapercave.com/wp/wp8930518.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -9,186 +22,254 @@
   background-blend-mode: darken;
   width: 100%;
 }
-#intro{
-    background: rgb(1,0,5);
-background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgb(10, 94, 119) 50%, rgba(0,0,0,1) 75%);
-   }
+#intro {
+  background: rgb(1, 0, 5);
+  background: radial-gradient(
+    circle,
+    rgba(1, 0, 5, 1) 25%,
+    rgb(10, 94, 119) 50%,
+    rgba(0, 0, 0, 1) 75%
+  );
+  font-family: var(--ff-righteous);
+}
 
-#header-style{
-    background: rgb(22,6,170);
-    background: linear-gradient(176deg, rgba(22,6,170,1) 0%, rgba(0,221,103,1) 100%);
-   background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   -moz-text-fill-color: transparent;
-}  
+#header-style {
+  background: rgb(22, 6, 170);
+  background: linear-gradient(
+    176deg,
+    rgba(22, 6, 170, 1) 0%,
+    rgba(0, 221, 103, 1) 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 70px;
+}
 h1 {
-    color: white;
-} 
+  color: white;
+}
 .drop-button {
-
-    background-color: rgb(29,168,145,1) !important;
-    color:white;
-    border-radius: 12px;
-    margin: 3px;   
+  background-color: rgb(29, 168, 145, 1) !important;
+  color: white;
+  border-radius: 12px;
+  margin: 3px;
 }
-.drop-button:hover {background: rgb(21,26,56);
-    background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
-        transition: all 0.5s ease-in-out;
-    }
+.drop-button:hover {
+  background: rgb(21, 26, 56);
+  background: linear-gradient(
+    180deg,
+    rgb(65, 66, 75) 1%,
+    rgba(29, 168, 145, 1) 53%,
+    rgb(65, 62, 75) 100%
+  );
+  transition: all 0.5s ease-in-out;
+}
 #band-info {
-    background-color: transparent;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
+  background-color: transparent;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
 }
-#repo_1, #repo_2{
-    background: rgb(23,184,194);
-background: linear-gradient(180deg, rgba(23,184,194,1) 0%, rgba(0,0,0,1) 25%, rgba(23,184,194,1) 50%, rgba(0,0,0,1) 75%, rgba(23,184,194,1) 100%);
-    color: white;
-    -webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
--moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
+#repo_1,
+#repo_2 {
+  background: rgb(23, 184, 194);
+  background: linear-gradient(
+    180deg,
+    rgba(23, 184, 194, 1) 0%,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(23, 184, 194, 1) 50%,
+    rgba(0, 0, 0, 1) 75%,
+    rgba(23, 184, 194, 1) 100%
+  );
+  color: white;
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
+  -moz-box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
+  box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
 }
 #repo_3 {
-    display: flex;
-    justify-content: center;
-    background-color: transparent;
-    box-shadow: none;   
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  box-shadow: none;
 }
-.album-btn{
-    width: fit-content;
-    color: white;
-    background: rgba(29,168,145,1);
-    border-radius: 10px;
-    padding: 3px;
-    margin:1px;
+.album-btn {
+  width: fit-content;
+  color: white;
+  background: rgba(29, 168, 145, 1);
+  border-radius: 10px;
+  padding: 3px;
+  margin: 1px;
 }
 
-.album-btn:hover{ background: rgb(21,26,56);
-    background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
-        transition: all 0.5s ease-in-out;
+.album-btn:hover {
+  background: rgb(21, 26, 56);
+  background: linear-gradient(
+    180deg,
+    rgb(65, 66, 75) 1%,
+    rgba(29, 168, 145, 1) 53%,
+    rgb(65, 62, 75) 100%
+  );
+  transition: all 0.5s ease-in-out;
 }
-#twitter-link, #instagram-link, #facebook-link, #wiki-link, #bio-button {
-    display: flex;
-    flex: auto;
-    justify-content: center;
-    align-content: space-around;
-   margin-top: 0;
-}  
+#twitter-link,
+#instagram-link,
+#facebook-link,
+#wiki-link,
+#bio-button {
+  display: flex;
+  flex: auto;
+  justify-content: center;
+  align-content: space-around;
+  margin-top: 0;
+}
 #twitter {
-    color: rgb(0, 153, 255);
+  color: rgb(0, 153, 255);
 }
 #fb {
-    color: rgb(16, 50, 243);
+  color: rgb(16, 50, 243);
 }
 #insta {
-    background: rgb(131,58,180);
-background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 90%);
-   background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   -moz-text-fill-color: transparent;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    180deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 90%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 #artist {
-    text-align: center;
-    margin-bottom:20px;
-    font-size: 40px;
-    font-weight: bolder;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: bolder;
 }
-#wik{
-    color: rgba(255, 255, 255, 0.685);
+#wik {
+  color: rgba(255, 255, 255, 0.685);
 }
 #recent_searches {
-    background-color: transparent;
-    box-shadow: none;
+  background-color: transparent;
+  box-shadow: none;
 }
 #recent {
-    color:rgba(255, 255, 255, 0.685);
+  color: rgba(255, 255, 255, 0.685);
 }
-.modal-content{ 
-    margin-top: 65px;
-    max-width: 500px; 
+.modal-content {
+  margin-top: 65px;
+  max-width: 500px;
 }
-#search_btn{
-    background-color: rgba(29,168,145,1);
-    -webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
--moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);     
+#search_btn {
+  background-color: rgba(29, 168, 145, 1);
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
+  -moz-box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
+  box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
 }
-#search_btn:hover{
-    background: rgb(21,26,56);
-background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
-    transition: all 0.5s ease-in-out;   
+#search_btn:hover {
+  background: rgb(21, 26, 56);
+  background: linear-gradient(
+    180deg,
+    rgb(65, 66, 75) 1%,
+    rgba(29, 168, 145, 1) 53%,
+    rgb(65, 62, 75) 100%
+  );
+  transition: all 0.5s ease-in-out;
 }
-#recent_clear{
-    background-color: rgba(29,168,145,1);
-color: #fff;
--webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
--moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
+#recent_clear {
+  background-color: rgba(29, 168, 145, 1);
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
+  -moz-box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
+  box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
 }
-#bio-button{
-    background-color: rgba(29,168,145,1);
-    -webkit-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
--moz-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
-box-shadow: 0px 0px 9px 3px rgba(84,83,84,1);
+#bio-button {
+  background-color: rgba(29, 168, 145, 1);
+  -webkit-box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
+  -moz-box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
+  box-shadow: 0px 0px 9px 3px rgba(84, 83, 84, 1);
 }
 
-#recent_clear:hover{
-    background: rgb(21,26,56);
-    background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
-        transition: all 0.5s ease-in-out;
+#recent_clear:hover {
+  background: rgb(21, 26, 56);
+  background: linear-gradient(
+    180deg,
+    rgb(65, 66, 75) 1%,
+    rgba(29, 168, 145, 1) 53%,
+    rgb(65, 62, 75) 100%
+  );
+  transition: all 0.5s ease-in-out;
 }
 
-#bio-button:hover{
-    background: rgb(21,26,56);
-    background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
-        transition: all 0.5s ease-in-out;
+#bio-button:hover {
+  background: rgb(21, 26, 56);
+  background: linear-gradient(
+    180deg,
+    rgb(65, 66, 75) 1%,
+    rgba(29, 168, 145, 1) 53%,
+    rgb(65, 62, 75) 100%
+  );
+  transition: all 0.5s ease-in-out;
 }
 .url-Link {
-    min-width: 100%;
-    background-color: rgb(35, 180, 185) !important;
-    color:white;
-    border-radius: 12px;
-    margin: 3px;
-    width: 50%;
+  min-width: 100%;
+  background-color: rgb(35, 180, 185) !important;
+  color: white;
+  border-radius: 12px;
+  margin: 3px;
+  width: 50%;
 }
-.body2{
-    background: rgb(1,0,5);
-    background: radial-gradient(circle, rgba(1,0,5,1) 25%, rgb(10, 94, 119) 50%, rgba(0,0,0,1) 75%);
+.body2 {
+  background: rgb(1, 0, 5);
+  background: radial-gradient(
+    circle,
+    rgba(1, 0, 5, 1) 25%,
+    rgb(10, 94, 119) 50%,
+    rgba(0, 0, 0, 1) 75%
+  );
 }
 #intro_title {
-    font-size: 75px;
-    background: rgb(22,6,170);
-    background: linear-gradient(176deg, rgba(22,6,170,1) 0%, rgba(0,221,103,1) 100%);
-   background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   -moz-text-fill-color: transparent;
+  font-size: 75px;
+  background: rgb(22, 6, 170);
+  background: linear-gradient(
+    176deg,
+    rgba(22, 6, 170, 1) 0%,
+    rgba(0, 221, 103, 1) 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 .blurb {
-    font-size: 20px;
-    color: white;
+  font-size: 20px;
+  color: white;
 }
 #margins2 {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 .footer {
-    background-color: black;
+  background-color: black;
 }
 .buy-now {
-    font-size: 16px;
-    color:white;
-    background-color: rgba(29,168,145,1);
-    border-radius: 10px;
-    padding: 3px;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(29, 168, 145, 1);
+  border-radius: 10px;
+  padding: 3px;
 }
 .buy-now:hover {
-    background: rgb(21,26,56);
-    background: linear-gradient(180deg, rgb(65, 66, 75) 1%, rgba(29,168,145,1) 53%, rgb(65, 62, 75) 100%);
-        transition: all 0.5s ease-in-out;
+  background: rgb(21, 26, 56);
+  background: linear-gradient(
+    180deg,
+    rgb(65, 66, 75) 1%,
+    rgba(29, 168, 145, 1) 53%,
+    rgb(65, 62, 75) 100%
+  );
+  transition: all 0.5s ease-in-out;
 }

@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html class = "body2" >
+<html class="body2">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bandopedia</title>
     <!-- favicon -->
-    <link rel="shortcut icon" href="https://iconarchive.com/download/i44090/wwalczyszyn/iwindows/Music-Library.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="https://iconarchive.com/download/i44090/wwalczyszyn/iwindows/Music-Library.ico"
+      type="image/x-icon"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bangers&    family=Mouse+Memoirs&family=Permanent+Marker&family=Righteous&family=Sigmar+One&    family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
     <!-- bulma -->
     <link
       rel="stylesheet"
@@ -15,11 +26,11 @@
     <link rel="stylesheet" href="Assets/CSS/style.css" />
   </head>
 
-  <body >
+  <body class="fonts">
     <section class="hero is-medium has-text-centered">
       <div class="hero-body">
         <p class="title" id="intro_title">Bandopedia</p>
-        <p class = "blurb">Your One Stop for All Things Music</p>
+        <p class="blurb">Your One Stop for All Things Music</p>
       </div>
     </section>
     <div class="mt-6">
@@ -28,13 +39,18 @@
           <h1 id="search_title">Search a Band or Artist:</h1>
           <div class="field has-addons">
             <div class="control">
-              <input class="input" id="search-input" type="text" placeholder="Band or Artist" />
+              <input
+                class="input"
+                id="search-input"
+                type="text"
+                placeholder="Band or Artist"
+              />
             </div>
-            
+
             <div class="control">
-              
-              <button class="button is-info container" id="search_page"> Search</button>
-                
+              <button class="button is-info container" id="search_page">
+                Search
+              </button>
             </div>
           </div>
         </div>
