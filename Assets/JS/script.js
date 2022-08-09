@@ -98,7 +98,7 @@ fetch(requestUrl)
       venueLine.textContent = "Venue: " + concertVenue;
       locationLine.textContent = concertCity + ", " + concertCountry;
       concertUrlLine.textContent =  "Buy Tickets";
-      blank.textContent = "________________________________________________";
+      blank.textContent = "_____________________________________";
 
       concertInfo.append(dateLine);
       concertInfo.append(eventLine);
